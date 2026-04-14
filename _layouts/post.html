@@ -28,6 +28,9 @@ layout: default
   </aside>
   {% endif %}
 
+{% if page.image %}
+  <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="post-cover" style="width: 50%; display: block; margin: 0 auto;">
+{% endif %}
   <div class="post-content">
     {{ content }}
   </div>
