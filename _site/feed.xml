@@ -11,7 +11,7 @@ bundle <span class="nb">install
 </span>bundle <span class="nb">exec </span>jekyll serve
 </code></pre></div></div>
 
-<p>Open <code class="language-plaintext highlighter-rouge">http://localhost:4000</code> in your browser. Jekyll will watch for file changes and rebuild automatically — just refresh the page to see your edits.</p>
+<p>Open <code class="language-plaintext highlighter-rouge">http://localhost:4000</code> in your browser. Jekyll will watch for file changes and rebuild automatically - just refresh the page to see your edits.</p>
 
 <hr />
 
@@ -23,11 +23,11 @@ bundle <span class="nb">install
   <li>Go to the <a href="https://github.com/microfrosty/math-server.github.io/issues">Issues tab</a> on GitHub.</li>
   <li>Click <strong>New issue</strong>.</li>
   <li>Give it a clear title (e.g. <em>“Add post on the Banach–Tarski paradox”</em> or <em>“Fix broken MathJax on mobile”</em>).</li>
-  <li>Fill in the description — what the problem is, or what you’d like to see.</li>
+  <li>Fill in the description - what the problem is, or what you’d like to see.</li>
   <li>Submit.</li>
 </ol>
 
-<p>Issues are automatically added to the project board via a GitHub Actions workflow, so no manual triage needed — it’ll appear in the backlog the moment you file it.</p>
+<p>Issues are automatically added to the project board via a GitHub Actions workflow, so no manual triage needed - it’ll appear in the backlog the moment you file it.</p>
 
 <hr />
 

@@ -4,7 +4,7 @@ A Jekyll-based mathematics blog with four main sections: **Exploration**, **Lear
 
 ## Features
 
-- 🧮 **Full LaTeX rendering** via [MathJax 3](https://www.mathjax.org/) — inline `$...$` and display `$$...$$` math
+- 🧮 **Full LaTeX rendering** via [MathJax 3](https://www.mathjax.org/) - inline `$...$` and display `$$...$$` math
 - 📚 Eight math topic categories in the Learning section
 - 📖 Book reviews with rating and metadata cards
 - 🌑 Dark editorial theme with Playfair Display typography

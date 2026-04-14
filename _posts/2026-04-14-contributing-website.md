@@ -24,7 +24,7 @@ bundle install
 bundle exec jekyll serve
 ```
 
-Open `http://localhost:4000` in your browser. Jekyll will watch for file changes and rebuild automatically — just refresh the page to see your edits.
+Open `http://localhost:4000` in your browser. Jekyll will watch for file changes and rebuild automatically - just refresh the page to see your edits.
 
 ---
 
@@ -35,10 +35,10 @@ Issues are how we track bugs, content requests, and feature ideas.
 1. Go to the [Issues tab](https://github.com/microfrosty/math-server.github.io/issues) on GitHub.
 2. Click **New issue**.
 3. Give it a clear title (e.g. *"Add post on the Banach–Tarski paradox"* or *"Fix broken MathJax on mobile"*).
-4. Fill in the description — what the problem is, or what you'd like to see.
+4. Fill in the description - what the problem is, or what you'd like to see.
 5. Submit.
 
-Issues are automatically added to the project board via a GitHub Actions workflow, so no manual triage needed — it'll appear in the backlog the moment you file it.
+Issues are automatically added to the project board via a GitHub Actions workflow, so no manual triage needed - it'll appear in the backlog the moment you file it.
 
 ---
 
