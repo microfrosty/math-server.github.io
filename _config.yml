@@ -1,8 +1,8 @@
-title: Math Server
+title: Micromass Athenæum
 description: A community space for mathematical exploration, learning, and discovery.
 baseurl: "/math-server.github.io"
 url: "https://microfrosty.github.io"
-author: Math Server
+author: Micromass Athenæum
 markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:year/:month/:day/:title/

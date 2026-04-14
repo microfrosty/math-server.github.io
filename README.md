@@ -1,4 +1,4 @@
-# Math Server
+# Micromass Athenæum
 
 A Jekyll-based mathematics blog with four main sections: **Exploration**, **Learning**, **Books**, and **Misc**.
 

@@ -1,0 +1,11 @@
+---
+layout: page
+title: Discrete Mathematics
+permalink: /learning/discrete-mathematics/
+---
+<div class="posts-grid wide">
+  {% assign posts = site.posts | where: "math_category", "discrete-mathematics" | where_exp: "p", "p.categories contains 'learning'" %}
+  {% for post in posts %}
+    {% include post-card.html post=post %}
+  {% endfor %}
+</div>

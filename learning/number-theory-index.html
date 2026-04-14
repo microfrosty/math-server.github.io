@@ -1,0 +1,11 @@
+---
+layout: page
+title: Number Theory
+permalink: /learning/number-theory/
+---
+<div class="posts-grid wide">
+  {% assign posts = site.posts | where: "math_category", "number-theory" | where_exp: "p", "p.categories contains 'learning'" %}
+  {% for post in posts %}
+    {% include post-card.html post=post %}
+  {% endfor %}
+</div>

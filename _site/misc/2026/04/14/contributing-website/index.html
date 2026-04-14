@@ -1,4 +1,115 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/math-server.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/math-server.github.io/" rel="alternate" type="text/html" /><updated>2026-04-14T17:53:54-05:00</updated><id>http://localhost:4000/math-server.github.io/feed.xml</id><title type="html">Micromass Athenæum</title><subtitle>A community space for mathematical exploration, learning, and discovery.</subtitle><author><name>Micromass Athenæum</name></author><entry><title type="html">Contributing to Micromass Athenæum</title><link href="http://localhost:4000/math-server.github.io/misc/2026/04/14/contributing-website/" rel="alternate" type="text/html" title="Contributing to Micromass Athenæum" /><published>2026-04-14T00:00:00-05:00</published><updated>2026-04-14T00:00:00-05:00</updated><id>http://localhost:4000/math-server.github.io/misc/2026/04/14/contributing-website</id><content type="html" xml:base="http://localhost:4000/math-server.github.io/misc/2026/04/14/contributing-website/"><![CDATA[<p>Whether you want to fix a typo, write a new post, or suggest a feature, this guide walks you through the full contribution workflow for Micromass Athenæum.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contributing to Micromass Athenæum — Micromass Athenæum</title>
+  <meta name="description" content="A community space for mathematical exploration, learning, and discovery." />
+  <link rel="stylesheet" href="/math-server.github.io/assets/css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- MathJax 3 — full LaTeX support -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        packages: {'[+]': ['ams', 'boldsymbol']},
+        tags: 'ams',
+        macros: {
+          R: '\\mathbb{R}',
+          N: '\\mathbb{N}',
+          Z: '\\mathbb{Z}',
+          Q: '\\mathbb{Q}',
+          C: '\\mathbb{C}',
+          eps: '\\varepsilon',
+          d: '\\mathrm{d}'
+        }
+      },
+      options: {
+        skipHtmlTags: ['script','noscript','style','textarea','pre','code']
+      },
+      startup: {
+        ready() {
+          MathJax.startup.defaultReady();
+        }
+      }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Contributing to Micromass Athenæum | Micromass Athenæum</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Contributing to Micromass Athenæum" />
+<meta name="author" content="Frosty" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Whether you want to fix a typo, write a new post, or suggest a feature, this guide walks you through the full contribution workflow for Micromass Athenæum." />
+<meta property="og:description" content="Whether you want to fix a typo, write a new post, or suggest a feature, this guide walks you through the full contribution workflow for Micromass Athenæum." />
+<link rel="canonical" href="http://localhost:4000/math-server.github.io/misc/2026/04/14/contributing-website/" />
+<meta property="og:url" content="http://localhost:4000/math-server.github.io/misc/2026/04/14/contributing-website/" />
+<meta property="og:site_name" content="Micromass Athenæum" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-14T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Contributing to Micromass Athenæum" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Frosty"},"dateModified":"2026-04-14T00:00:00-05:00","datePublished":"2026-04-14T00:00:00-05:00","description":"Whether you want to fix a typo, write a new post, or suggest a feature, this guide walks you through the full contribution workflow for Micromass Athenæum.","headline":"Contributing to Micromass Athenæum","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/math-server.github.io/misc/2026/04/14/contributing-website/"},"url":"http://localhost:4000/math-server.github.io/misc/2026/04/14/contributing-website/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+
+  <header class="site-header">
+  <div class="header-inner">
+    <a href="/math-server.github.io/" class="site-logo">
+      <span class="logo-symbol">Σ</span>
+      <span class="logo-text">Micromass Athenæum</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/math-server.github.io/exploration/" class="nav-link ">Exploration</a>
+      <a href="/math-server.github.io/learning/" class="nav-link ">Learning</a>
+      <a href="/math-server.github.io/books/" class="nav-link ">Books</a>
+      <a href="/math-server.github.io/misc/" class="nav-link active">Misc</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="site-main">
+    <article class="post">
+  <header class="post-header">
+    <div class="post-meta-top">
+      
+        <a href="/math-server.github.io/misc/" class="post-category-tag">Misc</a>
+      
+    </div>
+    <h1 class="post-title">Contributing to Micromass Athenæum</h1>
+    
+      <p class="post-subtitle">How to clone the repo, build locally, open issues, make pull requests, and write new posts</p>
+    
+    <div class="post-meta">
+      <time datetime="2026-04-14T00:00:00-05:00">April 14, 2026</time>
+      <span class="post-author">by Frosty</span>
+      <span class="reading-time">8 min read</span>
+    </div>
+  </header>
+
+  
+  <aside class="post-tldr">
+    <strong>TL;DR</strong> Everything you need to go from zero to merged pull request, cloning the repo, running Jekyll locally, filing issues, opening PRs, and writing your first post.
+  </aside>
+  
+
+  <div class="post-content">
+    <p>Whether you want to fix a typo, write a new post, or suggest a feature, this guide walks you through the full contribution workflow for Micromass Athenæum.</p>
 
 <h2 id="1-clone-the-repo-and-build-locally">1. Clone the Repo and Build Locally</h2>
 
@@ -129,4 +240,45 @@ $$
 
 <hr />
 
-<p>Once your post looks good locally, follow the PR steps above and it’ll be reviewed and merged into the site.</p>]]></content><author><name>Frosty</name></author><category term="misc" /><category term="github" /><category term="contributing" /><category term="workflow" /><summary type="html"><![CDATA[Whether you want to fix a typo, write a new post, or suggest a feature, this guide walks you through the full contribution workflow for Micromass Athenæum.]]></summary></entry></feed>
+<p>Once your post looks good locally, follow the PR steps above and it’ll be reviewed and merged into the site.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+        <span class="tag">github</span>
+      
+        <span class="tag">contributing</span>
+      
+        <span class="tag">workflow</span>
+      
+    </div>
+    
+    <a href="javascript:history.back()" class="back-link">← Back</a>
+  </footer>
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-symbol">Σ</span>
+      <span>Micromass Athenæum</span>
+    </div>
+    <nav class="footer-nav">
+      <a href="/math-server.github.io/exploration/">Exploration</a>
+      <a href="/math-server.github.io/learning/">Learning</a>
+      <a href="/math-server.github.io/books/">Books</a>
+      <a href="/math-server.github.io/misc/">Misc</a>
+    </nav>
+    <p class="footer-note">Built with Jekyll &amp; MathJax. Mathematics lives here.</p>
+  </div>
+</footer>
+
+
+  <script src="/math-server.github.io/assets/js/main.js"></script>
+</body>
+</html>
