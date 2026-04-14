@@ -1,0 +1,22 @@
+<article class="post-card">
+  <div class="post-card-inner">
+    {% if include.post.category %}
+      <span class="card-category">{{ include.post.category | replace: '-', ' ' | capitalize }}</span>
+    {% elsif include.post.categories[0] %}
+      <span class="card-category">{{ include.post.categories[0] | replace: '-', ' ' | capitalize }}</span>
+    {% endif %}
+    <h3 class="card-title">
+      <a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a>
+    </h3>
+    {% if include.post.subtitle %}
+      <p class="card-subtitle">{{ include.post.subtitle }}</p>
+    {% endif %}
+    <p class="card-excerpt">{{ include.post.excerpt | strip_html | truncatewords: 30 }}</p>
+    <div class="card-meta">
+      <time>{{ include.post.date | date: "%b %-d, %Y" }}</time>
+      {% if include.post.reading_time %}
+        <span>· {{ include.post.reading_time }} min read</span>
+      {% endif %}
+    </div>
+  </div>
+</article>

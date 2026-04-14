@@ -1,0 +1,13 @@
+---
+layout: page
+title: Exploration
+description: Open-ended mathematical investigations, puzzles, conjectures, and rabbit holes worth diving into.
+permalink: /exploration/
+---
+
+<div class="posts-grid wide">
+  {% assign posts = site.posts | where_exp: "p", "p.categories contains 'exploration'" %}
+  {% for post in posts %}
+    {% include post-card.html post=post %}
+  {% endfor %}
+</div>

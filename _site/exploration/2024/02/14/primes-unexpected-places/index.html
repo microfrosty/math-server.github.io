@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Primes in Unexpected Places — Math Server</title>
+  <meta name="description" content="A community space for mathematical exploration, learning, and discovery." />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- MathJax 3 — full LaTeX support -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        packages: {'[+]': ['ams', 'boldsymbol']},
+        tags: 'ams',
+        macros: {
+          R: '\\mathbb{R}',
+          N: '\\mathbb{N}',
+          Z: '\\mathbb{Z}',
+          Q: '\\mathbb{Q}',
+          C: '\\mathbb{C}',
+          eps: '\\varepsilon',
+          d: '\\mathrm{d}'
+        }
+      },
+      options: {
+        skipHtmlTags: ['script','noscript','style','textarea','pre','code']
+      },
+      startup: {
+        ready() {
+          MathJax.startup.defaultReady();
+        }
+      }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Primes in Unexpected Places | Math Server</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Primes in Unexpected Places" />
+<meta name="author" content="Math Server" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Most people meet primes as a list: $2, 3, 5, 7, 11, 13, \ldots$ But primes have a habit of appearing where nobody expected them." />
+<meta property="og:description" content="Most people meet primes as a list: $2, 3, 5, 7, 11, 13, \ldots$ But primes have a habit of appearing where nobody expected them." />
+<link rel="canonical" href="http://localhost:4000/exploration/2024/02/14/primes-unexpected-places/" />
+<meta property="og:url" content="http://localhost:4000/exploration/2024/02/14/primes-unexpected-places/" />
+<meta property="og:site_name" content="Math Server" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-02-14T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Primes in Unexpected Places" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Math Server"},"dateModified":"2024-02-14T00:00:00-06:00","datePublished":"2024-02-14T00:00:00-06:00","description":"Most people meet primes as a list: $2, 3, 5, 7, 11, 13, \\ldots$ But primes have a habit of appearing where nobody expected them.","headline":"Primes in Unexpected Places","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/exploration/2024/02/14/primes-unexpected-places/"},"url":"http://localhost:4000/exploration/2024/02/14/primes-unexpected-places/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+
+  <header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <span class="logo-symbol">Σ</span>
+      <span class="logo-text">Math Server</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/exploration/" class="nav-link active">Exploration</a>
+      <a href="/learning/" class="nav-link ">Learning</a>
+      <a href="/books/" class="nav-link ">Books</a>
+      <a href="/misc/" class="nav-link ">Misc</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="site-main">
+    <article class="post">
+  <header class="post-header">
+    <div class="post-meta-top">
+      
+        <a href="/exploration/" class="post-category-tag">Exploration</a>
+      
+    </div>
+    <h1 class="post-title">Primes in Unexpected Places</h1>
+    
+      <p class="post-subtitle">From Pascal's triangle to Ulam spirals — prime numbers hide in plain sight</p>
+    
+    <div class="post-meta">
+      <time datetime="2024-02-14T00:00:00-06:00">February 14, 2024</time>
+      
+      <span class="reading-time">6 min read</span>
+    </div>
+  </header>
+
+  
+  <aside class="post-tldr">
+    <strong>TL;DR</strong> Prime numbers appear in surprising structures — Pascal's triangle, spiral grids, even musical tuning systems — hinting at deep hidden order.
+  </aside>
+  
+
+  <div class="post-content">
+    <p>Most people meet primes as a list: $2, 3, 5, 7, 11, 13, \ldots$ But primes have a habit of appearing where nobody expected them.</p>
+
+<h2 id="pascals-triangle-mod-2">Pascal’s Triangle mod 2</h2>
+
+<p>Color every entry in Pascal’s triangle: white if even, black if odd. The pattern that emerges is <strong>Sierpiński’s triangle</strong> — a fractal with self-similar structure at every scale.</p>
+
+<p>The entry $\binom{n}{k}$ is odd if and only if $k \mathbin{\&amp;} n = k$ (bitwise AND), a consequence of <strong>Kummer’s theorem</strong>: the highest power of prime $p$ dividing $\binom{m+n}{m}$ equals the number of carries when adding $m$ and $n$ in base $p$.</p>
+
+<h2 id="the-ulam-spiral">The Ulam Spiral</h2>
+
+<p>In 1963, Stanisław Ulam, bored during a meeting, started writing integers in a spiral:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>17 16 15 14 13
+18  5  4  3 12
+19  6  1  2 11
+20  7  8  9 10
+21 22 23 24 25 ...
+</code></pre></div></div>
+
+<p>When he circled the primes, diagonal lines appeared. Primes cluster along diagonals corresponding to quadratic polynomials like $n^2 + n + 41$ — <strong>Euler’s lucky number</strong>, which generates primes for $n = 0, 1, \ldots, 39$.</p>
+
+<h2 id="wilsons-theorem">Wilson’s Theorem</h2>
+
+<p>A number $p$ is prime if and only if:</p>
+
+\[(p-1)! \equiv -1 \pmod{p}\]
+
+<p>This is a beautiful characterization — but practically useless for testing primality (computing $(p-1)!$ for large $p$ is infeasible). Its elegance is purely theoretical.</p>
+
+<h2 id="primes-and-music">Primes and Music</h2>
+
+<p>The 12-tone equal temperament system divides the octave into 12 equal semitones. Why 12? Partly because $2^{7/12} \approx 1.4983 \approx 3/2$ — a perfect fifth — making the tuning system work. The density of good rational approximations to $\log_2 3$ is intimately connected to the distribution of primes via the <strong>three-distance theorem</strong>.</p>
+
+<h2 id="the-riemann-hypothesis">The Riemann Hypothesis</h2>
+
+<p>All of this hints at deeper structure. The distribution of primes is governed by the zeros of the <strong>Riemann zeta function</strong>:</p>
+
+\[\zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s} = \prod_{p \text{ prime}} \frac{1}{1 - p^{-s}}\]
+
+<p>The hypothesis: all non-trivial zeros of $\zeta(s)$ lie on the line $\Re(s) = 1/2$. A million-dollar problem. Unsolved since 1859.</p>
+
+<p>Primes are everywhere. We just haven’t learned to see them yet.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+        <span class="tag">primes</span>
+      
+        <span class="tag">patterns</span>
+      
+        <span class="tag">visualization</span>
+      
+    </div>
+    
+    <a href="javascript:history.back()" class="back-link">← Back</a>
+  </footer>
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-symbol">Σ</span>
+      <span>Math Server</span>
+    </div>
+    <nav class="footer-nav">
+      <a href="/exploration/">Exploration</a>
+      <a href="/learning/">Learning</a>
+      <a href="/books/">Books</a>
+      <a href="/misc/">Misc</a>
+    </nav>
+    <p class="footer-note">Built with Jekyll &amp; MathJax. Mathematics lives here.</p>
+  </div>
+</footer>
+
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

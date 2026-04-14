@@ -1,0 +1,81 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero">
+  <div class="hero-text">
+    <p class="hero-eyebrow">// math-server.github.io</p>
+    <h1 class="hero-title">Where <em>mathematics</em> finds its home</h1>
+    <p class="hero-desc">Explorations, proofs, book reviews, and learning resources for anyone who loves the beauty of abstract thought.</p>
+    <div class="hero-actions">
+      <a href="{{ '/learning/' | relative_url }}" class="btn btn-primary">Start Learning</a>
+      <a href="{{ '/exploration/' | relative_url }}" class="btn btn-ghost">Browse Explorations</a>
+    </div>
+  </div>
+
+  <div class="hero-math" aria-hidden="true">
+    <div class="math-line">
+      <span class="math-label">Euler's Identity</span>
+      \[ e^{i\pi} + 1 = 0 \]
+    </div>
+    <div class="math-line">
+      <span class="math-label">Fundamental Theorem of Calculus</span>
+      \[ \int_a^b f'(x)\,\d x = f(b) - f(a) \]
+    </div>
+    <div class="math-line">
+      <span class="math-label">Gaussian Integral</span>
+      \[ \int_{-\infty}^{\infty} e^{-x^2}\,\d x = \sqrt{\pi} \]
+    </div>
+    <div class="math-line">
+      <span class="math-label">Basel Problem</span>
+      \[ \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6} \]
+    </div>
+  </div>
+</section>
+
+<div style="max-width:var(--max-w); margin:0 auto; padding:0 1.5rem;">
+
+  <!-- Recent Explorations -->
+  <section style="margin-bottom:4rem;">
+    <div class="section-heading">
+      <h2>Recent Explorations</h2>
+      <a href="{{ '/exploration/' | relative_url }}" class="see-all">See all →</a>
+    </div>
+    <div class="posts-grid">
+      {% assign exploration_posts = site.posts | where_exp: "p", "p.categories contains 'exploration'" | limit: 3 %}
+      {% for post in exploration_posts %}
+        {% include post-card.html post=post %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Recent Learning -->
+  <section style="margin-bottom:4rem;">
+    <div class="section-heading">
+      <h2>From the Learning Section</h2>
+      <a href="{{ '/learning/' | relative_url }}" class="see-all">See all →</a>
+    </div>
+    <div class="posts-grid">
+      {% assign learning_posts = site.posts | where_exp: "p", "p.categories contains 'learning'" | limit: 3 %}
+      {% for post in learning_posts %}
+        {% include post-card.html post=post %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Recent Books -->
+  <section style="margin-bottom:4rem;">
+    <div class="section-heading">
+      <h2>Latest Book Reviews</h2>
+      <a href="{{ '/books/' | relative_url }}" class="see-all">See all →</a>
+    </div>
+    <div class="posts-grid">
+      {% assign book_posts = site.posts | where_exp: "p", "p.categories contains 'books'" | limit: 3 %}
+      {% for post in book_posts %}
+        {% include post-card.html post=post %}
+      {% endfor %}
+    </div>
+  </section>
+
+</div>

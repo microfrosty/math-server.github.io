@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-04-14T04:19:12-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Math Server</title><subtitle>A community space for mathematical exploration, learning, and discovery.</subtitle><author><name>Math Server</name></author><entry><title type="html">Review: Gödel, Escher, Bach — An Eternal Golden Braid</title><link href="http://localhost:4000/books/2024/03/20/review-godel-escher-bach/" rel="alternate" type="text/html" title="Review: Gödel, Escher, Bach — An Eternal Golden Braid" /><published>2024-03-20T00:00:00-05:00</published><updated>2024-03-20T00:00:00-05:00</updated><id>http://localhost:4000/books/2024/03/20/review-godel-escher-bach</id><content type="html" xml:base="http://localhost:4000/books/2024/03/20/review-godel-escher-bach/"><![CDATA[<div class="book-meta-card">
+  <div class="book-meta-item">
+    <span class="book-meta-label">Author</span>
+    <span class="book-meta-value">Douglas R. Hofstadter</span>
+  </div>
+  <div class="book-meta-item">
+    <span class="book-meta-label">Published</span>
+    <span class="book-meta-value">1979, Basic Books</span>
+  </div>
+  <div class="book-meta-item">
+    <span class="book-meta-label">Pages</span>
+    <span class="book-meta-value">777</span>
+  </div>
+  <div class="book-meta-item">
+    <span class="book-meta-label">Rating</span>
+    <span class="rating">★★★★★</span>
+  </div>
+  <div class="book-meta-item">
+    <span class="book-meta-label">Best for</span>
+    <span class="book-meta-value">Anyone with mathematical curiosity and patience</span>
+  </div>
+</div>
+
+<p>There are books that teach you things, and then there is <em>GEB</em> — a book that changes how you think. Douglas Hofstadter’s Pulitzer Prize-winning work is not a textbook, not a popularization, and not quite a philosophy book, though it touches all three. It is an argument, made through allegory, formal systems, dialogues between Achilles and a Tortoise, and musical analysis: that <strong>self-reference is the key to consciousness</strong>.</p>
+
+<h2 id="the-mathematical-core">The Mathematical Core</h2>
+
+<p>The mathematical centerpiece is <strong>Gödel’s incompleteness theorems</strong>:</p>
+
+<p><strong>First Theorem:</strong> Any consistent formal system $F$ capable of expressing basic arithmetic contains statements that are true but unprovable within $F$.</p>
+
+<p><strong>Second Theorem:</strong> Such a system cannot prove its own consistency.</p>
+
+<p>The proof is a masterpiece of self-reference. Gödel constructs a statement $G$ that essentially says “This statement is not provable in $F$.” If $F$ is consistent, $G$ must be true — but it cannot be proved. If $F$ could prove $G$, $F$ would be inconsistent.</p>
+
+<p>Hofstadter’s insight is that this proof is not just a mathematical curiosity — it’s a template for how minds work. A sufficiently complex formal system, when it “talks about itself,” generates statements that escape its own rules. He calls this a <strong>Strange Loop</strong>.</p>
+
+<h2 id="the-structure-of-the-book">The Structure of the Book</h2>
+
+<p>The book alternates between:</p>
+<ul>
+  <li><strong>Dialogues:</strong> Lewis Carroll-style conversations between Achilles, the Tortoise, the Crab, and others — each embodying the chapter’s mathematical concept as wordplay and allegory</li>
+  <li><strong>Chapters:</strong> Direct exposition of formal systems, recursion, MU-puzzles, Zen koans, DNA/protein analogies, and AI</li>
+</ul>
+
+<p>The dialogues are not decorative — they <em>are</em> the argument, embodying self-reference rather than merely describing it. This is intentional and brilliant, but it makes the book slow going. At 777 pages, it demands patience.</p>
+
+<h2 id="what-the-book-gets-right">What the Book Gets Right</h2>
+
+<p>Hofstadter’s exposition of <strong>formal systems</strong> is the clearest I have encountered. He builds them from scratch with his “MIU system” — three symbols, four rules, and the question of whether MU is derivable. You feel the incompleteness before you learn the proof.</p>
+
+<p>His treatment of <strong>recursive structures</strong> — in Bach’s crab canon, in Escher’s <em>Drawing Hands</em>, in the genetic code — is genuinely illuminating. The isomorphism between levels of abstraction is his central theme, executed with relentless creativity.</p>
+
+<h2 id="what-it-doesnt-quite-do">What It Doesn’t Quite Do</h2>
+
+<p>The leap from formal systems to consciousness is — Hofstadter admits — speculative. His claim that strange loops <em>are</em> consciousness (or at least necessary for it) is philosophically contested. Critics including John Searle (of the Chinese Room) argue that symbol manipulation, however self-referential, is not the same as understanding.</p>
+
+<p>The book is also uneven. Some chapters (the MU-puzzle, the Contracrostipunctus) are masterpieces. Others feel meandering. The AI chapters have aged poorly — written in 1979, they reflect the optimism of early GOFAI.</p>
+
+<h2 id="verdict">Verdict</h2>
+
+<p><em>GEB</em> is essential reading for anyone serious about mathematics, logic, or the philosophy of mind. It is not the fastest route to Gödel’s theorems (Nagel &amp; Newman’s <em>Gödel’s Proof</em> is 100 pages and excellent), but it is the most transformative. Read it slowly. Do the exercises. Talk about it with someone.</p>
+
+<p>The experience of reading <em>GEB</em> is itself a strange loop: a book about self-reference that, in reading, produces self-reference in you.</p>
+
+\[\text{This sentence is not provable.}\]
+
+<p>That Hofstadter made an 800-page book out of that idea — and made it beautiful — is its own kind of miracle.</p>]]></content><author><name>Math Server</name></author><category term="books" /><category term="logic" /><category term="foundations" /><category term="consciousness" /><category term="philosophy" /><category term="godel" /><summary type="html"><![CDATA[Author Douglas R. Hofstadter Published 1979, Basic Books Pages 777 Rating ★★★★★ Best for Anyone with mathematical curiosity and patience]]></summary></entry><entry><title type="html">Bayes’ Theorem and Bayesian Reasoning</title><link href="http://localhost:4000/learning/2024/03/15/bayes-theorem/" rel="alternate" type="text/html" title="Bayes’ Theorem and Bayesian Reasoning" /><published>2024-03-15T00:00:00-05:00</published><updated>2024-03-15T00:00:00-05:00</updated><id>http://localhost:4000/learning/2024/03/15/bayes-theorem</id><content type="html" xml:base="http://localhost:4000/learning/2024/03/15/bayes-theorem/"><![CDATA[<h2 id="the-theorem">The Theorem</h2>
+
+\[P(A \mid B) = \frac{P(B \mid A)\,P(A)}{P(B)}\]
+
+<p>In words: the probability of $A$ given $B$ equals the likelihood of $B$ under $A$, times the prior probability of $A$, divided by the total probability of $B$.</p>
+
+<p>The terms have names in Bayesian inference:</p>
+<ul>
+  <li>$P(A)$: <strong>prior</strong> — belief before seeing evidence</li>
+  <li>$P(B \mid A)$: <strong>likelihood</strong> — how probable is the evidence if $A$ is true?</li>
+  <li>$P(A \mid B)$: <strong>posterior</strong> — updated belief after evidence</li>
+  <li>$P(B)$: <strong>marginal likelihood</strong> (normalizing constant)</li>
+</ul>
+
+<h2 id="the-medical-test-example">The Medical Test Example</h2>
+
+<p>A disease affects 1% of the population. A test is 99% sensitive (true positive rate) and 99% specific (true negative rate). You test positive. What’s the probability you have the disease?</p>
+
+<p>Let $D$ = “has disease”, $T$ = “tests positive.”</p>
+
+\[P(D \mid T) = \frac{P(T \mid D)\,P(D)}{P(T)}\]
+
+\[P(T) = P(T \mid D)P(D) + P(T \mid D^c)P(D^c) = 0.99 \cdot 0.01 + 0.01 \cdot 0.99 = 0.0198\]
+
+\[P(D \mid T) = \frac{0.99 \cdot 0.01}{0.0198} = \frac{0.0099}{0.0198} = 0.5\]
+
+<p>Only <strong>50%</strong>, despite a 99% accurate test! The low prior (1%) dilutes the evidence.</p>
+
+<h2 id="sequential-updating">Sequential Updating</h2>
+
+<p>Bayes’ power shows when you update repeatedly. After each new piece of evidence $e_i$, the posterior becomes the new prior:</p>
+
+\[P(\theta \mid e_1, \ldots, e_n) \propto P(\theta)\prod_{i=1}^{n} P(e_i \mid \theta)\]
+
+<p>(assuming evidence is conditionally independent given $\theta$).</p>
+
+<h2 id="the-law-of-total-probability">The Law of Total Probability</h2>
+
+<p>The denominator in Bayes’ theorem uses:</p>
+
+\[P(B) = \sum_{i} P(B \mid A_i)\,P(A_i)\]
+
+<p>where ${A_i}$ partition the sample space. This is the <strong>law of total probability</strong>.</p>
+
+<h2 id="conjugate-priors">Conjugate Priors</h2>
+
+<p>Some prior-likelihood pairs produce posteriors of the same family — <strong>conjugate pairs</strong>. The most famous:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Prior</th>
+      <th>Likelihood</th>
+      <th>Posterior</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Beta$(α, β)$</td>
+      <td>Binomial</td>
+      <td>Beta$(α+k, β+n-k)$</td>
+    </tr>
+    <tr>
+      <td>Normal$(\mu_0, \sigma_0^2)$</td>
+      <td>Normal (known $\sigma$)</td>
+      <td>Normal</td>
+    </tr>
+    <tr>
+      <td>Gamma$(α, β)$</td>
+      <td>Poisson</td>
+      <td>Gamma</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Conjugate priors make Bayesian updating analytically tractable — no numerical integration needed.</p>
+
+<h2 id="bayesian-vs-frequentist">Bayesian vs. Frequentist</h2>
+
+<p>The philosophical divide:</p>
+<ul>
+  <li><strong>Frequentist:</strong> Probability is the long-run frequency of events. Parameters are fixed unknowns; data is random.</li>
+  <li><strong>Bayesian:</strong> Probability quantifies degree of belief. Parameters have distributions; data updates beliefs.</li>
+</ul>
+
+<p>Both frameworks are useful. The Bayesian approach shines when prior knowledge is meaningful and sample sizes are small.</p>]]></content><author><name>Math Server</name></author><category term="learning" /><category term="probability" /><category term="bayes" /><category term="statistics" /><category term="inference" /><summary type="html"><![CDATA[The Theorem]]></summary></entry><entry><title type="html">The Collatz Conjecture: Simple to State, Impossible to Prove</title><link href="http://localhost:4000/exploration/2024/03/10/collatz-conjecture/" rel="alternate" type="text/html" title="The Collatz Conjecture: Simple to State, Impossible to Prove" /><published>2024-03-10T00:00:00-06:00</published><updated>2024-03-10T00:00:00-06:00</updated><id>http://localhost:4000/exploration/2024/03/10/collatz-conjecture</id><content type="html" xml:base="http://localhost:4000/exploration/2024/03/10/collatz-conjecture/"><![CDATA[<p>Take any positive integer $n$. Apply this rule:</p>
+
+\[f(n) = \begin{cases} n/2 &amp; \text{if } n \equiv 0 \pmod{2} \\ 3n + 1 &amp; \text{if } n \equiv 1 \pmod{2} \end{cases}\]
+
+<p>Repeat indefinitely. The <strong>Collatz conjecture</strong> states that for every positive integer $n$, this process eventually reaches $1$.</p>
+
+<h2 id="a-few-examples">A Few Examples</h2>
+
+<p>Starting from $n = 6$:</p>
+
+\[6 \to 3 \to 10 \to 5 \to 16 \to 8 \to 4 \to 2 \to 1\]
+
+<p>Starting from $n = 27$, the sequence takes a wild ride — it climbs to $9232$ before finally descending to $1$ after 111 steps.</p>
+
+<h2 id="why-is-this-hard">Why Is This Hard?</h2>
+
+<p>The problem has a fractal-like resistance to analysis. Each step multiplies the odd numbers by roughly $3/2$ (since multiply by 3, add 1, then divide by 2), suggesting divergence — yet empirically every number tested collapses to 1.</p>
+
+<p>The density of odd numbers encountered is approximately $1/2$ of steps, so heuristically:</p>
+
+\[\mathbb{E}\left[\log f(n)\right] \approx \frac{1}{2}\log\frac{1}{2} + \frac{1}{2}\log\frac{3}{2} \approx -0.059\]
+
+<p>This negative expected log-drift suggests convergence — but heuristics are not proofs.</p>
+
+<h2 id="what-we-do-know">What We Do Know</h2>
+
+<p>Mathematicians have verified the conjecture computationally for all $n &lt; 2^{68}$ (roughly $2.95 \times 10^{20}$). Yet as Paul Erdős reportedly said:</p>
+
+<blockquote>
+  <p>Mathematics is not yet ready for such problems.</p>
+</blockquote>
+
+<p>The conjecture resists tools from ergodic theory, $p$-adic analysis, and analytic number theory alike. Terence Tao made significant progress in 2019, showing that “almost all” Collatz sequences (in a logarithmic density sense) eventually reach a value below any given function $f(n) \to \infty$ — the closest anyone has come.</p>
+
+<h2 id="an-invitation">An Invitation</h2>
+
+<p>Try writing code to visualize the “stopping time” (number of steps to reach 1) as a function of $n$. Plot it. You’ll find a beautiful, chaotic fractal structure that makes the problem feel even more mysterious.</p>
+
+\[\sigma(n) = \min\{k \geq 0 : f^k(n) = 1\}\]
+
+<p>Where $f^k$ means $f$ applied $k$ times. The graph of $\sigma(n)$ is one of the most beautiful objects in elementary number theory.</p>]]></content><author><name>Math Server</name></author><category term="exploration" /><category term="number-theory" /><category term="open-problems" /><category term="sequences" /><summary type="html"><![CDATA[Take any positive integer $n$. Apply this rule:]]></summary></entry><entry><title type="html">The Epsilon-Delta Definition of a Limit</title><link href="http://localhost:4000/learning/2024/03/01/epsilon-delta-limits/" rel="alternate" type="text/html" title="The Epsilon-Delta Definition of a Limit" /><published>2024-03-01T00:00:00-06:00</published><updated>2024-03-01T00:00:00-06:00</updated><id>http://localhost:4000/learning/2024/03/01/epsilon-delta-limits</id><content type="html" xml:base="http://localhost:4000/learning/2024/03/01/epsilon-delta-limits/"><![CDATA[<p>Calculus rests on the concept of a <strong>limit</strong>. Informally, we say $\lim_{x \to a} f(x) = L$ when $f(x)$ gets arbitrarily close to $L$ as $x$ approaches $a$. But “arbitrarily close” and “approaches” are not mathematics — they’re metaphors. The epsilon-delta definition replaces the metaphors with logic.</p>
+
+<h2 id="the-definition">The Definition</h2>
+
+\[\lim_{x \to a} f(x) = L \iff \forall\, \eps &gt; 0,\; \exists\, \delta &gt; 0 \text{ s.t. } 0 &lt; |x - a| &lt; \delta \implies |f(x) - L| &lt; \eps\]
+
+<p>Read aloud: “For every challenge $\eps$ (how close you want $f(x)$ to be to $L$), I can find a response $\delta$ (how close $x$ must be to $a$) that meets the challenge.”</p>
+
+<h2 id="a-worked-example">A Worked Example</h2>
+
+<p><strong>Claim:</strong> $\lim_{x \to 3} (2x + 1) = 7$.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Proof:</strong> Let $\eps &gt; 0$ be given. We need $</td>
+      <td>f(x) - 7</td>
+      <td>&lt; \eps$, i.e., $</td>
+      <td>(2x+1) - 7</td>
+      <td>=</td>
+      <td>2x - 6</td>
+      <td>= 2</td>
+      <td>x-3</td>
+      <td>&lt; \eps$.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>This holds when $</td>
+      <td>x - 3</td>
+      <td>&lt; \eps/2$. So choose $\delta = \eps/2$.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Then $0 &lt;</td>
+      <td>x - 3</td>
+      <td>&lt; \delta \implies</td>
+      <td>f(x) - 7</td>
+      <td>= 2</td>
+      <td>x-3</td>
+      <td>&lt; 2\delta = \eps$. $\square$</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="why-the-0--x---a-condition">Why the $0 &lt; |x - a|$ Condition?</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Notice we require $0 &lt;</td>
+      <td>x - a</td>
+      <td>$, meaning $x \neq a$. Limits describe behavior <strong>near</strong> a point, not <strong>at</strong> it. The function need not even be defined at $a$.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For example, $\lim_{x \to 0} \frac{\sin x}{x} = 1$ even though $\frac{\sin 0}{0}$ is undefined.</p>
+
+<h2 id="the-squeeze-theorem">The Squeeze Theorem</h2>
+
+<p>If $g(x) \leq f(x) \leq h(x)$ near $a$, and $\lim_{x\to a} g(x) = \lim_{x\to a} h(x) = L$, then:</p>
+
+\[\lim_{x \to a} f(x) = L\]
+
+<p><strong>Proof of $\lim_{x \to 0} \frac{\sin x}{x} = 1$:</strong> For $0 &lt; x &lt; \pi/2$:</p>
+
+\[\cos x \leq \frac{\sin x}{x} \leq 1\]
+
+<p>Since $\lim_{x\to 0}\cos x = 1$ and $\lim_{x\to 0} 1 = 1$, the Squeeze Theorem gives the result.</p>
+
+<h2 id="continuity">Continuity</h2>
+
+<p>A function $f$ is <strong>continuous at $a$</strong> if:</p>
+
+\[\lim_{x \to a} f(x) = f(a)\]
+
+<p>Three things must hold: $f(a)$ is defined, the limit exists, and they’re equal. Continuity is what makes calculus “work” — the intermediate value theorem, the extreme value theorem, and differentiability all build on it.</p>]]></content><author><name>Math Server</name></author><category term="learning" /><category term="calculus" /><category term="limits" /><category term="real-analysis" /><category term="foundations" /><summary type="html"><![CDATA[Calculus rests on the concept of a limit. Informally, we say $\lim_{x \to a} f(x) = L$ when $f(x)$ gets arbitrarily close to $L$ as $x$ approaches $a$. But “arbitrarily close” and “approaches” are not mathematics — they’re metaphors. The epsilon-delta definition replaces the metaphors with logic.]]></summary></entry><entry><title type="html">Eigenvalues and Eigenvectors: The Skeleton of a Matrix</title><link href="http://localhost:4000/learning/2024/02/20/eigenvalues-eigenvectors/" rel="alternate" type="text/html" title="Eigenvalues and Eigenvectors: The Skeleton of a Matrix" /><published>2024-02-20T00:00:00-06:00</published><updated>2024-02-20T00:00:00-06:00</updated><id>http://localhost:4000/learning/2024/02/20/eigenvalues-eigenvectors</id><content type="html" xml:base="http://localhost:4000/learning/2024/02/20/eigenvalues-eigenvectors/"><![CDATA[<p>A matrix $A$ represents a linear transformation: it takes vectors in and spits vectors out. Most vectors get both rotated and scaled. But some special vectors — <strong>eigenvectors</strong> — only get scaled.</p>
+
+<h2 id="the-definition">The Definition</h2>
+
+<p>A nonzero vector $\mathbf{v}$ is an <strong>eigenvector</strong> of $A$ with <strong>eigenvalue</strong> $\lambda$ if:</p>
+
+\[A\mathbf{v} = \lambda\mathbf{v}\]
+
+<p>The matrix $A$ acts on $\mathbf{v}$ exactly like scalar multiplication by $\lambda$.</p>
+
+<h2 id="finding-eigenvalues">Finding Eigenvalues</h2>
+
+<p>Rewrite: $(A - \lambda I)\mathbf{v} = \mathbf{0}$. For nonzero solutions, the matrix $A - \lambda I$ must be singular:</p>
+
+\[\det(A - \lambda I) = 0\]
+
+<p>This is the <strong>characteristic equation</strong>. Its roots are the eigenvalues.</p>
+
+<p><strong>Example:</strong> Let $A = \begin{pmatrix} 3 &amp; 1 \ 0 &amp; 2 \end{pmatrix}$.</p>
+
+\[\det(A - \lambda I) = (3-\lambda)(2-\lambda) = 0 \implies \lambda_1 = 3,\; \lambda_2 = 2\]
+
+<p>For $\lambda_1 = 3$: $(A - 3I)\mathbf{v} = \begin{pmatrix}0&amp;1\0&amp;-1\end{pmatrix}\mathbf{v} = \mathbf{0}$, giving $\mathbf{v}_1 = \begin{pmatrix}1\0\end{pmatrix}$.</p>
+
+<p>For $\lambda_2 = 2$: $(A - 2I)\mathbf{v} = \begin{pmatrix}1&amp;1\0&amp;0\end{pmatrix}\mathbf{v} = \mathbf{0}$, giving $\mathbf{v}_2 = \begin{pmatrix}-1\1\end{pmatrix}$.</p>
+
+<h2 id="diagonalization">Diagonalization</h2>
+
+<p>If $A$ has $n$ linearly independent eigenvectors, form matrix $P = [\mathbf{v}_1 \mid \cdots \mid \mathbf{v}_n]$. Then:</p>
+
+\[A = P D P^{-1}, \quad D = \operatorname{diag}(\lambda_1, \ldots, \lambda_n)\]
+
+<p>This is <strong>diagonalization</strong>. It’s enormously useful: $A^k = P D^k P^{-1}$, and $D^k = \operatorname{diag}(\lambda_1^k, \ldots, \lambda_n^k)$.</p>
+
+<h2 id="the-spectral-theorem">The Spectral Theorem</h2>
+
+<p>For <strong>symmetric</strong> matrices ($A = A^T$):</p>
+<ul>
+  <li>All eigenvalues are <strong>real</strong></li>
+  <li>Eigenvectors for distinct eigenvalues are <strong>orthogonal</strong></li>
+  <li>$A$ is always diagonalizable: $A = Q D Q^T$ with $Q$ orthogonal</li>
+</ul>
+
+<p>This is the <strong>spectral theorem</strong>, the cornerstone of principal component analysis (PCA), quadratic forms, and quantum mechanics.</p>
+
+<h2 id="geometric-intuition">Geometric Intuition</h2>
+
+<p>The eigenvalues of the <strong>Jacobian</strong> of a dynamical system $\dot{\mathbf{x}} = f(\mathbf{x})$ at a fixed point tell you whether the system is stable:</p>
+<ul>
+  <li>$\Re(\lambda) &lt; 0$ for all $\lambda$: stable (attracting)</li>
+  <li>Any $\Re(\lambda) &gt; 0$: unstable (repelling)</li>
+</ul>
+
+<p>Eigenvalues aren’t just algebra — they’re the geometry of change.</p>]]></content><author><name>Math Server</name></author><category term="learning" /><category term="linear-algebra" /><category term="eigenvalues" /><category term="transformations" /><summary type="html"><![CDATA[A matrix $A$ represents a linear transformation: it takes vectors in and spits vectors out. Most vectors get both rotated and scaled. But some special vectors — eigenvectors — only get scaled.]]></summary></entry><entry><title type="html">Primes in Unexpected Places</title><link href="http://localhost:4000/exploration/2024/02/14/primes-unexpected-places/" rel="alternate" type="text/html" title="Primes in Unexpected Places" /><published>2024-02-14T00:00:00-06:00</published><updated>2024-02-14T00:00:00-06:00</updated><id>http://localhost:4000/exploration/2024/02/14/primes-unexpected-places</id><content type="html" xml:base="http://localhost:4000/exploration/2024/02/14/primes-unexpected-places/"><![CDATA[<p>Most people meet primes as a list: $2, 3, 5, 7, 11, 13, \ldots$ But primes have a habit of appearing where nobody expected them.</p>
+
+<h2 id="pascals-triangle-mod-2">Pascal’s Triangle mod 2</h2>
+
+<p>Color every entry in Pascal’s triangle: white if even, black if odd. The pattern that emerges is <strong>Sierpiński’s triangle</strong> — a fractal with self-similar structure at every scale.</p>
+
+<p>The entry $\binom{n}{k}$ is odd if and only if $k \mathbin{\&amp;} n = k$ (bitwise AND), a consequence of <strong>Kummer’s theorem</strong>: the highest power of prime $p$ dividing $\binom{m+n}{m}$ equals the number of carries when adding $m$ and $n$ in base $p$.</p>
+
+<h2 id="the-ulam-spiral">The Ulam Spiral</h2>
+
+<p>In 1963, Stanisław Ulam, bored during a meeting, started writing integers in a spiral:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>17 16 15 14 13
+18  5  4  3 12
+19  6  1  2 11
+20  7  8  9 10
+21 22 23 24 25 ...
+</code></pre></div></div>
+
+<p>When he circled the primes, diagonal lines appeared. Primes cluster along diagonals corresponding to quadratic polynomials like $n^2 + n + 41$ — <strong>Euler’s lucky number</strong>, which generates primes for $n = 0, 1, \ldots, 39$.</p>
+
+<h2 id="wilsons-theorem">Wilson’s Theorem</h2>
+
+<p>A number $p$ is prime if and only if:</p>
+
+\[(p-1)! \equiv -1 \pmod{p}\]
+
+<p>This is a beautiful characterization — but practically useless for testing primality (computing $(p-1)!$ for large $p$ is infeasible). Its elegance is purely theoretical.</p>
+
+<h2 id="primes-and-music">Primes and Music</h2>
+
+<p>The 12-tone equal temperament system divides the octave into 12 equal semitones. Why 12? Partly because $2^{7/12} \approx 1.4983 \approx 3/2$ — a perfect fifth — making the tuning system work. The density of good rational approximations to $\log_2 3$ is intimately connected to the distribution of primes via the <strong>three-distance theorem</strong>.</p>
+
+<h2 id="the-riemann-hypothesis">The Riemann Hypothesis</h2>
+
+<p>All of this hints at deeper structure. The distribution of primes is governed by the zeros of the <strong>Riemann zeta function</strong>:</p>
+
+\[\zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s} = \prod_{p \text{ prime}} \frac{1}{1 - p^{-s}}\]
+
+<p>The hypothesis: all non-trivial zeros of $\zeta(s)$ lie on the line $\Re(s) = 1/2$. A million-dollar problem. Unsolved since 1859.</p>
+
+<p>Primes are everywhere. We just haven’t learned to see them yet.</p>]]></content><author><name>Math Server</name></author><category term="exploration" /><category term="primes" /><category term="patterns" /><category term="visualization" /><summary type="html"><![CDATA[Most people meet primes as a list: $2, 3, 5, 7, 11, 13, \ldots$ But primes have a habit of appearing where nobody expected them.]]></summary></entry><entry><title type="html">Review: Principles of Mathematical Analysis</title><link href="http://localhost:4000/books/2024/02/10/review-baby-rudin/" rel="alternate" type="text/html" title="Review: Principles of Mathematical Analysis" /><published>2024-02-10T00:00:00-06:00</published><updated>2024-02-10T00:00:00-06:00</updated><id>http://localhost:4000/books/2024/02/10/review-baby-rudin</id><content type="html" xml:base="http://localhost:4000/books/2024/02/10/review-baby-rudin/"><![CDATA[<div class="book-meta-card">
+  <div class="book-meta-item">
+    <span class="book-meta-label">Author</span>
+    <span class="book-meta-value">Walter Rudin</span>
+  </div>
+  <div class="book-meta-item">
+    <span class="book-meta-label">Published</span>
+    <span class="book-meta-value">1953 (3rd ed. 1976), McGraw-Hill</span>
+  </div>
+  <div class="book-meta-item">
+    <span class="book-meta-label">Pages</span>
+    <span class="book-meta-value">342</span>
+  </div>
+  <div class="book-meta-item">
+    <span class="book-meta-label">Rating</span>
+    <span class="rating">★★★★☆</span>
+  </div>
+  <div class="book-meta-item">
+    <span class="book-meta-label">Best for</span>
+    <span class="book-meta-value">Undergraduate analysts, graduate review</span>
+  </div>
+</div>
+
+<p>Walter Rudin’s <em>Principles of Mathematical Analysis</em> — universally called <strong>Baby Rudin</strong> — has been the standard undergraduate real analysis text for over seventy years. It is 342 pages of some of the most compressed, polished mathematical prose ever written. Students either love it or survive it.</p>
+
+<h2 id="the-contents">The Contents</h2>
+
+<p>The book covers: the real and complex number systems, basic topology of metric spaces, sequences and series, continuity, differentiation, the Riemann-Stieltjes integral, sequences of functions, and a chapter each on special functions, functions of several variables, and the Lebesgue theory.</p>
+
+<p>This is an enormous amount of material in 342 pages.</p>
+
+<h2 id="the-style">The Style</h2>
+
+<p>Rudin writes as if every unnecessary word is a moral failing. Definitions are stated once. Proofs proceed without motivation. The reader is expected to reconstruct the thought process independently.</p>
+
+<p>A famous example — his proof that $\sqrt{2}$ is irrational occupies three lines and zero explanation of why he constructs the particular quantities he does. The proof works; the pedagogy is absent.</p>
+
+<p>This is either a deep pedagogical philosophy (mathematics is <em>doing</em>, not watching; the struggle is the lesson) or genuine indifference to readability. Probably both.</p>
+
+<h2 id="what-it-does-well">What It Does Well</h2>
+
+<p>The mathematical content is essentially perfect. Every theorem is stated precisely. Every proof is correct and often elegant. The exercises are legendary — some genuinely difficult, all worthwhile. Chapter 2 (basic topology) and Chapter 7 (uniform convergence) are particularly beautiful.</p>
+
+<p>The book also has genuine forward momentum. Rudin builds the real numbers from scratch, establishes completeness, and derives everything that follows with strict logical economy. Reading it carefully is a model of mathematical writing.</p>
+
+<h2 id="what-it-doesnt-do">What It Doesn’t Do</h2>
+
+<p>Motivation. Rudin does not tell you why you should care about uniform convergence before defining it, or what problem the Riemann-Stieltjes integral solves. The book is a finished product — the scaffolding is down, the mess is cleaned up, and you get the edifice with no hint of how it was built.</p>
+
+<p>For a first encounter with analysis, this is genuinely difficult. Students often reach the end of a Rudin chapter able to verify proofs but unable to explain what they proved or why.</p>
+
+<h2 id="recommended-supplements">Recommended Supplements</h2>
+
+<ul>
+  <li><strong>Abbott’s <em>Understanding Analysis</em>:</strong> Friendly, motivating, almost the anti-Rudin. Read it first.</li>
+  <li><strong>Tao’s <em>Analysis I &amp; II</em>:</strong> Builds everything from Peano axioms. More philosophical.</li>
+  <li><strong>Pugh’s <em>Real Mathematical Analysis</em>:</strong> Similar level, much more intuition and pictures.</li>
+</ul>
+
+<h2 id="the-verdict">The Verdict</h2>
+
+<p>Baby Rudin occupies a special place in mathematical culture. It is the proof that you can survive difficult things; the credential that you have learned real analysis properly; the book that, once read, makes other analysis books seem simple.</p>
+
+<p>It is not the best first book on real analysis. It is, perhaps, the best second book — after you have seen the ideas informally and are ready to see them done right.</p>
+
+\[\text{If } \{f_n\} \text{ converges uniformly to } f \text{ and each } f_n \text{ is continuous, then so is } f.\]
+
+<p>Rudin proves this in eight lines. No pictures. No motivation. Perfect.</p>]]></content><author><name>Math Server</name></author><category term="books" /><category term="real-analysis" /><category term="textbook" /><category term="rudin" /><category term="undergraduate" /><summary type="html"><![CDATA[Author Walter Rudin Published 1953 (3rd ed. 1976), McGraw-Hill Pages 342 Rating ★★★★☆ Best for Undergraduate analysts, graduate review]]></summary></entry><entry><title type="html">Modular Arithmetic and the Chinese Remainder Theorem</title><link href="http://localhost:4000/learning/2024/02/05/modular-arithmetic-crt/" rel="alternate" type="text/html" title="Modular Arithmetic and the Chinese Remainder Theorem" /><published>2024-02-05T00:00:00-06:00</published><updated>2024-02-05T00:00:00-06:00</updated><id>http://localhost:4000/learning/2024/02/05/modular-arithmetic-crt</id><content type="html" xml:base="http://localhost:4000/learning/2024/02/05/modular-arithmetic-crt/"><![CDATA[<p><strong>Modular arithmetic</strong> formalizes the idea of a clock: after 12 comes 1, not 13. We write $a \equiv b \pmod{n}$ (read “$a$ is congruent to $b$ mod $n$”) when $n \mid (a - b)$.</p>
+
+<h2 id="basic-properties">Basic Properties</h2>
+
+<p>Congruences behave like equations — you can add, subtract, and multiply both sides:</p>
+
+\[a \equiv b,\; c \equiv d \pmod{n} \implies \begin{cases} a + c \equiv b + d \\ ac \equiv bd \end{cases} \pmod{n}\]
+
+<p>Division is trickier. $a \cdot x \equiv 1 \pmod{n}$ has a solution (the <strong>modular inverse</strong>) exactly when $\gcd(a, n) = 1$.</p>
+
+<h2 id="fermats-little-theorem">Fermat’s Little Theorem</h2>
+
+<p>If $p$ is prime and $\gcd(a, p) = 1$:</p>
+
+\[a^{p-1} \equiv 1 \pmod{p}\]
+
+<p>Equivalently, $a^p \equiv a \pmod p$ for all $a$. This is the foundation of <strong>RSA encryption</strong>: encrypting with exponent $e$ and decrypting with $d$ where $ed \equiv 1 \pmod{p-1}$.</p>
+
+<h2 id="the-chinese-remainder-theorem">The Chinese Remainder Theorem</h2>
+
+<p><strong>Theorem.</strong> Let $n_1, n_2, \ldots, n_k$ be pairwise coprime. Then the system:</p>
+
+\[x \equiv a_1 \pmod{n_1}, \quad x \equiv a_2 \pmod{n_2}, \quad \ldots, \quad x \equiv a_k \pmod{n_k}\]
+
+<p>has a unique solution modulo $N = n_1 n_2 \cdots n_k$.</p>
+
+<p><strong>Construction.</strong> Let $N_i = N/n_i$. Since $\gcd(N_i, n_i) = 1$, the inverse $M_i \equiv N_i^{-1} \pmod{n_i}$ exists. Then:</p>
+
+\[x = \sum_{i=1}^{k} a_i N_i M_i \pmod{N}\]
+
+<p><strong>Example.</strong> Solve $x \equiv 2 \pmod{3}$, $x \equiv 3 \pmod{5}$, $x \equiv 2 \pmod{7}$.</p>
+
+<p>$N = 105$, so $N_1 = 35$, $N_2 = 21$, $N_3 = 15$.</p>
+
+<p>Inverses: $35^{-1} \equiv 2 \pmod 3$, $21^{-1} \equiv 1 \pmod 5$, $15^{-1} \equiv 1 \pmod 7$.</p>
+
+\[x = 2 \cdot 35 \cdot 2 + 3 \cdot 21 \cdot 1 + 2 \cdot 15 \cdot 1 = 140 + 63 + 30 = 233 \equiv 23 \pmod{105}\]
+
+<p>Check: $23 = 7\cdot3+2$, $23 = 4\cdot5+3$, $23 = 3\cdot7+2$. ✓</p>
+
+<h2 id="applications">Applications</h2>
+
+<p>CRT appears in: fast arithmetic on large numbers (split mod small primes, compute, reconstruct), secret sharing schemes, calendar calculations, and competitive programming.</p>]]></content><author><name>Math Server</name></author><category term="learning" /><category term="number-theory" /><category term="modular-arithmetic" /><category term="crt" /><category term="cryptography" /><summary type="html"><![CDATA[Modular arithmetic formalizes the idea of a clock: after 12 comes 1, not 13. We write $a \equiv b \pmod{n}$ (read “$a$ is congruent to $b$ mod $n$”) when $n \mid (a - b)$.]]></summary></entry><entry><title type="html">Review: The Man Who Knew Infinity</title><link href="http://localhost:4000/books/2024/01/30/review-man-who-knew-infinity/" rel="alternate" type="text/html" title="Review: The Man Who Knew Infinity" /><published>2024-01-30T00:00:00-06:00</published><updated>2024-01-30T00:00:00-06:00</updated><id>http://localhost:4000/books/2024/01/30/review-man-who-knew-infinity</id><content type="html" xml:base="http://localhost:4000/books/2024/01/30/review-man-who-knew-infinity/"><![CDATA[<div class="book-meta-card">
+  <div class="book-meta-item">
+    <span class="book-meta-label">Author</span>
+    <span class="book-meta-value">Robert Kanigel</span>
+  </div>
+  <div class="book-meta-item">
+    <span class="book-meta-label">Published</span>
+    <span class="book-meta-value">1991, Charles Scribner's Sons</span>
+  </div>
+  <div class="book-meta-item">
+    <span class="book-meta-label">Pages</span>
+    <span class="book-meta-value">438</span>
+  </div>
+  <div class="book-meta-item">
+    <span class="book-meta-label">Rating</span>
+    <span class="rating">★★★★★</span>
+  </div>
+  <div class="book-meta-item">
+    <span class="book-meta-label">Best for</span>
+    <span class="book-meta-value">Everyone — no technical background needed</span>
+  </div>
+</div>
+
+<p>In 1913, a 25-year-old clerk from Madras with no formal mathematical training wrote a letter to G.H. Hardy at Cambridge. It contained 120 theorems, many without proof. Hardy later said it was the most extraordinary letter he ever received. The clerk was <strong>Srinivasa Ramanujan</strong>.</p>
+
+<p>Robert Kanigel’s biography tells the story of one of the most improbable careers in the history of mathematics — a man who seemed to receive mathematical truths from the goddess Namagiri, who filled notebooks with formulas that professional mathematicians spent decades verifying, and who died at 32 having barely begun.</p>
+
+<h2 id="the-mathematics">The Mathematics</h2>
+
+<p>Kanigel is not a mathematician, and he wisely does not pretend to fully explain Ramanujan’s work. But he conveys enough to communicate its strangeness. Consider:</p>
+
+\[\frac{1}{\pi} = \frac{2\sqrt{2}}{9801} \sum_{n=0}^{\infty} \frac{(4n)!(1103 + 26390n)}{(n!)^4\,396^{4n}}\]
+
+<p>Ramanujan wrote this down — it converges to $\pi$ so rapidly that the first term alone gives $\pi$ to 6 decimal places. He offered no proof. It is true.</p>
+
+<p>His work on <strong>mock theta functions</strong>, <strong>highly composite numbers</strong>, <strong>continued fractions</strong>, and <strong>partition theory</strong> is still generating research papers a century after his death. The “Ramanujan conjecture” about the $\tau$-function remained open until Deligne proved it in 1974, winning the Fields Medal in part for doing so.</p>
+
+<h2 id="the-human-story">The Human Story</h2>
+
+<p>What makes the book transcendent is the human dimension. Ramanujan grew up in poverty in colonial India, failed his university examinations twice (he would study only mathematics), and spent years sending letters to professional mathematicians who ignored him before Hardy responded.</p>
+
+<p>His five years at Cambridge are portrayed with sensitivity. He was vegetarian; England could not accommodate him during wartime. He was Hindu; Cambridge was not. He was socially withdrawn; Hardy was famously cold. Yet the mathematical partnership was one of the most productive in history.</p>
+
+<p>The sadness of the ending — Ramanujan returned to India ill with tuberculosis, dying in 1920 at 32 — is devastating precisely because Kanigel has made him so vivid.</p>
+
+<h2 id="on-mathematical-intuition">On Mathematical Intuition</h2>
+
+<p>The book raises profound questions about the nature of mathematical discovery. Ramanujan consistently claimed his results came to him in dreams, delivered by a deity. Hardy, a strict atheist, found this embarrassing. But what is the alternative explanation?</p>
+
+<p>Mathematicians still argue about Ramanujan’s methods. Did he have proofs he didn’t write down? Was he working from some heuristic framework too personal to communicate? Did he genuinely receive divine inspiration? The mystery is unresolved.</p>
+
+<p>What is certain is that his notebooks — filled during long nights in Madras, with almost no books to consult — contain mathematics that the rest of the world hadn’t discovered yet, and in some cases still hasn’t fully understood.</p>
+
+<h2 id="verdict">Verdict</h2>
+
+<p><em>The Man Who Knew Infinity</em> is one of the finest biographies of a scientist or mathematician I have read. It requires no mathematical background; the awe it produces requires only human feeling. If you want to know why mathematics matters — why people devote their lives to it, what it feels like to encounter genuine genius — this is the book.</p>
+
+<p>Read it. Then feel appropriately humbled.</p>]]></content><author><name>Math Server</name></author><category term="books" /><category term="biography" /><category term="ramanujan" /><category term="number-theory" /><category term="history" /><summary type="html"><![CDATA[Author Robert Kanigel Published 1991, Charles Scribner's Sons Pages 438 Rating ★★★★★ Best for Everyone — no technical background needed]]></summary></entry><entry><title type="html">Does 1 + 2 + 3 + 4 + ⋯ = −1/12?</title><link href="http://localhost:4000/exploration/2024/01/22/divergent-series-ramanujan/" rel="alternate" type="text/html" title="Does 1 + 2 + 3 + 4 + ⋯ = −1/12?" /><published>2024-01-22T00:00:00-06:00</published><updated>2024-01-22T00:00:00-06:00</updated><id>http://localhost:4000/exploration/2024/01/22/divergent-series-ramanujan</id><content type="html" xml:base="http://localhost:4000/exploration/2024/01/22/divergent-series-ramanujan/"><![CDATA[<p>One of the most viral equations in mathematics:</p>
+
+\[1 + 2 + 3 + 4 + \cdots = -\frac{1}{12}\]
+
+<p>Is this nonsense? Is it profound? The answer is: <strong>both, depending on context</strong>.</p>
+
+<h2 id="the-standard-view">The Standard View</h2>
+
+<p>In the usual sense of convergence, the partial sums $S_N = N(N+1)/2$ grow without bound. The series <strong>diverges</strong>. Full stop.</p>
+
+<h2 id="ramanujans-approach">Ramanujan’s Approach</h2>
+
+<p>Srinivasa Ramanujan, working in India without access to Western mathematical literature, independently developed a summation method. For a function $f$ satisfying certain conditions:</p>
+
+\[\sum_{n=0}^{\infty} f(n) \overset{R}{=} -\sum_{k=1}^{\infty} \frac{B_k}{k!} f^{(k-1)}(0)\]
+
+<p>where $B_k$ are <strong>Bernoulli numbers</strong>. For $f(n) = n$, this yields $-1/12$.</p>
+
+<h2 id="the-zeta-function-route">The Zeta Function Route</h2>
+
+<p>The Riemann zeta function:</p>
+
+\[\zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s}, \quad \Re(s) &gt; 1\]
+
+<p>can be analytically continued to all $s \in \C$ except $s = 1$. At $s = -1$:</p>
+
+\[\zeta(-1) = -\frac{1}{12}\]
+
+<p>Formally, $\zeta(-1) = 1 + 2 + 3 + \cdots$, but this is <strong>not</strong> a statement about convergence — it’s a statement about the unique analytic continuation of $\zeta$.</p>
+
+<h2 id="why-physicists-care">Why Physicists Care</h2>
+
+<p>In <strong>string theory</strong> and the <strong>Casimir effect</strong>, regularized sums of this type appear naturally. The Casimir effect (the measurable attraction between uncharged parallel conducting plates) is computed using a regularized sum:</p>
+
+\[E = \frac{\hbar c}{2} \sum_{n=1}^{\infty} n \cdot \frac{\pi}{L} \overset{\text{reg.}}{=} \frac{\hbar c \pi}{2L} \cdot \left(-\frac{1}{12}\right) = -\frac{\pi \hbar c}{24 L}\]
+
+<p>This is experimentally verified.</p>
+
+<h2 id="the-moral">The Moral</h2>
+
+<p>Mathematics has many notions of “sum.” The standard one (limit of partial sums) is not the only one. Ramanujan summation, zeta regularization, and Abel summation all assign finite values to some divergent series — <strong>consistently</strong> across different methods — and those values are useful.</p>
+
+<p>The equation $1 + 2 + 3 + \cdots = -1/12$ is not wrong. It’s a statement about a different notion of sum than the one you learned in calculus. And that distinction matters enormously.</p>]]></content><author><name>Math Server</name></author><category term="exploration" /><category term="series" /><category term="analysis" /><category term="regularization" /><category term="ramanujan" /><summary type="html"><![CDATA[One of the most viral equations in mathematics:]]></summary></entry></feed>

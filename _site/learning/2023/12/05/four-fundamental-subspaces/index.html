@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Four Fundamental Subspaces — Math Server</title>
+  <meta name="description" content="A community space for mathematical exploration, learning, and discovery." />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- MathJax 3 — full LaTeX support -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        packages: {'[+]': ['ams', 'boldsymbol']},
+        tags: 'ams',
+        macros: {
+          R: '\\mathbb{R}',
+          N: '\\mathbb{N}',
+          Z: '\\mathbb{Z}',
+          Q: '\\mathbb{Q}',
+          C: '\\mathbb{C}',
+          eps: '\\varepsilon',
+          d: '\\mathrm{d}'
+        }
+      },
+      options: {
+        skipHtmlTags: ['script','noscript','style','textarea','pre','code']
+      },
+      startup: {
+        ready() {
+          MathJax.startup.defaultReady();
+        }
+      }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The Four Fundamental Subspaces | Math Server</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="The Four Fundamental Subspaces" />
+<meta name="author" content="Math Server" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Gilbert Strang argues that all of linear algebra — Gaussian elimination, least squares, the SVD — flows from understanding four subspaces associated with any matrix $A \in \R^{m \times n}$." />
+<meta property="og:description" content="Gilbert Strang argues that all of linear algebra — Gaussian elimination, least squares, the SVD — flows from understanding four subspaces associated with any matrix $A \in \R^{m \times n}$." />
+<link rel="canonical" href="http://localhost:4000/learning/2023/12/05/four-fundamental-subspaces/" />
+<meta property="og:url" content="http://localhost:4000/learning/2023/12/05/four-fundamental-subspaces/" />
+<meta property="og:site_name" content="Math Server" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-12-05T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Four Fundamental Subspaces" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Math Server"},"dateModified":"2023-12-05T00:00:00-06:00","datePublished":"2023-12-05T00:00:00-06:00","description":"Gilbert Strang argues that all of linear algebra — Gaussian elimination, least squares, the SVD — flows from understanding four subspaces associated with any matrix $A \\in \\R^{m \\times n}$.","headline":"The Four Fundamental Subspaces","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/learning/2023/12/05/four-fundamental-subspaces/"},"url":"http://localhost:4000/learning/2023/12/05/four-fundamental-subspaces/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+
+  <header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <span class="logo-symbol">Σ</span>
+      <span class="logo-text">Math Server</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/exploration/" class="nav-link ">Exploration</a>
+      <a href="/learning/" class="nav-link active">Learning</a>
+      <a href="/books/" class="nav-link ">Books</a>
+      <a href="/misc/" class="nav-link ">Misc</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="site-main">
+    <article class="post">
+  <header class="post-header">
+    <div class="post-meta-top">
+      
+        <a href="/learning/" class="post-category-tag">Learning</a>
+      
+    </div>
+    <h1 class="post-title">The Four Fundamental Subspaces</h1>
+    
+      <p class="post-subtitle">Gilbert Strang's organizing principle for all of linear algebra</p>
+    
+    <div class="post-meta">
+      <time datetime="2023-12-05T00:00:00-06:00">December 5, 2023</time>
+      
+      <span class="reading-time">9 min read</span>
+    </div>
+  </header>
+
+  
+  <aside class="post-tldr">
+    <strong>TL;DR</strong> Every m×n matrix gives rise to four subspaces — column space, null space, row space, left null space — and their dimensions are linked by the rank-nullity theorem.
+  </aside>
+  
+
+  <div class="post-content">
+    <p>Gilbert Strang argues that all of linear algebra — Gaussian elimination, least squares, the SVD — flows from understanding four subspaces associated with any matrix $A \in \R^{m \times n}$.</p>
+
+<h2 id="the-four-subspaces">The Four Subspaces</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Subspace</th>
+      <th>Lives in</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Column space $C(A)$</td>
+      <td>$\R^m$</td>
+      <td>${A\mathbf{x} : \mathbf{x} \in \R^n}$</td>
+    </tr>
+    <tr>
+      <td>Null space $N(A)$</td>
+      <td>$\R^n$</td>
+      <td>${\mathbf{x} : A\mathbf{x} = \mathbf{0}}$</td>
+    </tr>
+    <tr>
+      <td>Row space $C(A^T)$</td>
+      <td>$\R^n$</td>
+      <td>${A^T\mathbf{y} : \mathbf{y} \in \R^m}$</td>
+    </tr>
+    <tr>
+      <td>Left null space $N(A^T)$</td>
+      <td>$\R^m$</td>
+      <td>${\mathbf{y} : A^T\mathbf{y} = \mathbf{0}}$</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="the-rank-nullity-theorem">The Rank-Nullity Theorem</h2>
+
+<p>Let $r = \operatorname{rank}(A)$. Then:</p>
+
+<p>\(\dim C(A) = r, \quad \dim N(A) = n - r\)
+\(\dim C(A^T) = r, \quad \dim N(A^T) = m - r\)</p>
+
+<p>The dimensions add up perfectly: $r + (n-r) = n$ in $\R^n$, and $r + (m-r) = m$ in $\R^m$.</p>
+
+<h2 id="orthogonality">Orthogonality</h2>
+
+<p>The deep fact: <strong>the row space and null space are orthogonal complements in $\R^n$</strong>:</p>
+
+\[C(A^T) \perp N(A) \quad \text{and} \quad C(A^T) \oplus N(A) = \R^n\]
+
+<p>Similarly, $C(A) \perp N(A^T)$ in $\R^m$.</p>
+
+<p>This is why the equation $A\mathbf{x} = \mathbf{b}$ has a solution exactly when $\mathbf{b} \perp N(A^T)$ — the solvability condition.</p>
+
+<h2 id="solving-amathbfx--mathbfb">Solving $A\mathbf{x} = \mathbf{b}$</h2>
+
+<p>The complete solution decomposes as:</p>
+
+\[\mathbf{x} = \mathbf{x}_{\text{particular}} + \mathbf{x}_{\text{null}}\]
+
+<p>where $\mathbf{x}_{\text{null}} \in N(A)$. The particular solution lives in $C(A^T)$ (minimum norm), and the null space component is the freedom we have in the solution.</p>
+
+<p>Understanding these four subspaces turns solving linear systems from mechanical row reduction into genuine geometric insight.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+        <span class="tag">linear-algebra</span>
+      
+        <span class="tag">subspaces</span>
+      
+        <span class="tag">rank</span>
+      
+        <span class="tag">null-space</span>
+      
+    </div>
+    
+    <a href="javascript:history.back()" class="back-link">← Back</a>
+  </footer>
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-symbol">Σ</span>
+      <span>Math Server</span>
+    </div>
+    <nav class="footer-nav">
+      <a href="/exploration/">Exploration</a>
+      <a href="/learning/">Learning</a>
+      <a href="/books/">Books</a>
+      <a href="/misc/">Misc</a>
+    </nav>
+    <p class="footer-note">Built with Jekyll &amp; MathJax. Mathematics lives here.</p>
+  </div>
+</footer>
+
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

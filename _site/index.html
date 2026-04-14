@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home — Math Server</title>
+  <meta name="description" content="A community space for mathematical exploration, learning, and discovery." />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- MathJax 3 — full LaTeX support -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        packages: {'[+]': ['ams', 'boldsymbol']},
+        tags: 'ams',
+        macros: {
+          R: '\\mathbb{R}',
+          N: '\\mathbb{N}',
+          Z: '\\mathbb{Z}',
+          Q: '\\mathbb{Q}',
+          C: '\\mathbb{C}',
+          eps: '\\varepsilon',
+          d: '\\mathrm{d}'
+        }
+      },
+      options: {
+        skipHtmlTags: ['script','noscript','style','textarea','pre','code']
+      },
+      startup: {
+        ready() {
+          MathJax.startup.defaultReady();
+        }
+      }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Home | Math Server</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Home" />
+<meta name="author" content="Math Server" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A community space for mathematical exploration, learning, and discovery." />
+<meta property="og:description" content="A community space for mathematical exploration, learning, and discovery." />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Math Server" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Home" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Math Server"},"description":"A community space for mathematical exploration, learning, and discovery.","headline":"Home","name":"Math Server","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+
+  <header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <span class="logo-symbol">Σ</span>
+      <span class="logo-text">Math Server</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/exploration/" class="nav-link ">Exploration</a>
+      <a href="/learning/" class="nav-link ">Learning</a>
+      <a href="/books/" class="nav-link ">Books</a>
+      <a href="/misc/" class="nav-link ">Misc</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="site-main">
+    <section class="hero">
+  <div class="hero-text">
+    <p class="hero-eyebrow">// math-server.github.io</p>
+    <h1 class="hero-title">Where <em>mathematics</em> finds its home</h1>
+    <p class="hero-desc">Explorations, proofs, book reviews, and learning resources for anyone who loves the beauty of abstract thought.</p>
+    <div class="hero-actions">
+      <a href="/learning/" class="btn btn-primary">Start Learning</a>
+      <a href="/exploration/" class="btn btn-ghost">Browse Explorations</a>
+    </div>
+  </div>
+
+  <div class="hero-math" aria-hidden="true">
+    <div class="math-line">
+      <span class="math-label">Euler's Identity</span>
+      \[ e^{i\pi} + 1 = 0 \]
+    </div>
+    <div class="math-line">
+      <span class="math-label">Fundamental Theorem of Calculus</span>
+      \[ \int_a^b f'(x)\,\d x = f(b) - f(a) \]
+    </div>
+    <div class="math-line">
+      <span class="math-label">Gaussian Integral</span>
+      \[ \int_{-\infty}^{\infty} e^{-x^2}\,\d x = \sqrt{\pi} \]
+    </div>
+    <div class="math-line">
+      <span class="math-label">Basel Problem</span>
+      \[ \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6} \]
+    </div>
+  </div>
+</section>
+
+<div style="max-width:var(--max-w); margin:0 auto; padding:0 1.5rem;">
+
+  <!-- Recent Explorations -->
+  <section style="margin-bottom:4rem;">
+    <div class="section-heading">
+      <h2>Recent Explorations</h2>
+      <a href="/exploration/" class="see-all">See all →</a>
+    </div>
+    <div class="posts-grid">
+      
+      
+        <article class="post-card">
+  <div class="post-card-inner">
+    
+      <span class="card-category">Exploration</span>
+    
+    <h3 class="card-title">
+      <a href="/exploration/2024/03/10/collatz-conjecture/">The Collatz Conjecture: Simple to State, Impossible to Prove</a>
+    </h3>
+    
+      <p class="card-subtitle">One of the most deceptively simple open problems in all of mathematics</p>
+    
+    <p class="card-excerpt">Take any positive integer $n$. Apply this rule:
+</p>
+    <div class="card-meta">
+      <time>Mar 10, 2024</time>
+      
+        <span>· 8 min read</span>
+      
+    </div>
+  </div>
+</article>
+
+      
+        <article class="post-card">
+  <div class="post-card-inner">
+    
+      <span class="card-category">Exploration</span>
+    
+    <h3 class="card-title">
+      <a href="/exploration/2024/02/14/primes-unexpected-places/">Primes in Unexpected Places</a>
+    </h3>
+    
+      <p class="card-subtitle">From Pascal's triangle to Ulam spirals — prime numbers hide in plain sight</p>
+    
+    <p class="card-excerpt">Most people meet primes as a list: $2, 3, 5, 7, 11, 13, \ldots$ But primes have a habit of appearing where nobody expected them.
+</p>
+    <div class="card-meta">
+      <time>Feb 14, 2024</time>
+      
+        <span>· 6 min read</span>
+      
+    </div>
+  </div>
+</article>
+
+      
+        <article class="post-card">
+  <div class="post-card-inner">
+    
+      <span class="card-category">Exploration</span>
+    
+    <h3 class="card-title">
+      <a href="/exploration/2024/01/22/divergent-series-ramanujan/">Does 1 + 2 + 3 + 4 + ⋯ = −1/12?</a>
+    </h3>
+    
+      <p class="card-subtitle">Ramanujan summation and the regularization of divergent series</p>
+    
+    <p class="card-excerpt">One of the most viral equations in mathematics:
+</p>
+    <div class="card-meta">
+      <time>Jan 22, 2024</time>
+      
+        <span>· 10 min read</span>
+      
+    </div>
+  </div>
+</article>
+
+      
+    </div>
+  </section>
+
+  <!-- Recent Learning -->
+  <section style="margin-bottom:4rem;">
+    <div class="section-heading">
+      <h2>From the Learning Section</h2>
+      <a href="/learning/" class="see-all">See all →</a>
+    </div>
+    <div class="posts-grid">
+      
+      
+        <article class="post-card">
+  <div class="post-card-inner">
+    
+      <span class="card-category">Learning</span>
+    
+    <h3 class="card-title">
+      <a href="/learning/2024/03/15/bayes-theorem/">Bayes' Theorem and Bayesian Reasoning</a>
+    </h3>
+    
+      <p class="card-subtitle">How to update beliefs rationally in the face of new evidence</p>
+    
+    <p class="card-excerpt">The Theorem
+</p>
+    <div class="card-meta">
+      <time>Mar 15, 2024</time>
+      
+        <span>· 10 min read</span>
+      
+    </div>
+  </div>
+</article>
+
+      
+        <article class="post-card">
+  <div class="post-card-inner">
+    
+      <span class="card-category">Learning</span>
+    
+    <h3 class="card-title">
+      <a href="/learning/2024/03/01/epsilon-delta-limits/">The Epsilon-Delta Definition of a Limit</a>
+    </h3>
+    
+      <p class="card-subtitle">Making the intuitive notion of 'approaching' mathematically precise</p>
+    
+    <p class="card-excerpt">Calculus rests on the concept of a limit. Informally, we say $\lim_{x \to a} f(x) = L$ when $f(x)$ gets arbitrarily close to $L$ as $x$ approaches $a$. But “arbitrarily...</p>
+    <div class="card-meta">
+      <time>Mar 1, 2024</time>
+      
+        <span>· 12 min read</span>
+      
+    </div>
+  </div>
+</article>
+
+      
+        <article class="post-card">
+  <div class="post-card-inner">
+    
+      <span class="card-category">Learning</span>
+    
+    <h3 class="card-title">
+      <a href="/learning/2024/02/20/eigenvalues-eigenvectors/">Eigenvalues and Eigenvectors: The Skeleton of a Matrix</a>
+    </h3>
+    
+      <p class="card-subtitle">Understanding what a linear transformation actually does</p>
+    
+    <p class="card-excerpt">A matrix $A$ represents a linear transformation: it takes vectors in and spits vectors out. Most vectors get both rotated and scaled. But some special vectors — eigenvectors — only...</p>
+    <div class="card-meta">
+      <time>Feb 20, 2024</time>
+      
+        <span>· 11 min read</span>
+      
+    </div>
+  </div>
+</article>
+
+      
+        <article class="post-card">
+  <div class="post-card-inner">
+    
+      <span class="card-category">Learning</span>
+    
+    <h3 class="card-title">
+      <a href="/learning/2024/02/05/modular-arithmetic-crt/">Modular Arithmetic and the Chinese Remainder Theorem</a>
+    </h3>
+    
+      <p class="card-subtitle">Clock arithmetic, congruences, and a 2000-year-old algorithm</p>
+    
+    <p class="card-excerpt">Modular arithmetic formalizes the idea of a clock: after 12 comes 1, not 13. We write $a \equiv b \pmod{n}$ (read “$a$ is congruent to $b$ mod $n$”) when $n...</p>
+    <div class="card-meta">
+      <time>Feb 5, 2024</time>
+      
+        <span>· 10 min read</span>
+      
+    </div>
+  </div>
+</article>
+
+      
+        <article class="post-card">
+  <div class="post-card-inner">
+    
+      <span class="card-category">Learning</span>
+    
+    <h3 class="card-title">
+      <a href="/learning/2024/01/15/integration-by-parts/">Integration by Parts: The Product Rule in Reverse</a>
+    </h3>
+    
+      <p class="card-subtitle">A systematic technique for integrating products of functions</p>
+    
+    <p class="card-excerpt">The product rule for differentiation says:
+</p>
+    <div class="card-meta">
+      <time>Jan 15, 2024</time>
+      
+        <span>· 8 min read</span>
+      
+    </div>
+  </div>
+</article>
+
+      
+        <article class="post-card">
+  <div class="post-card-inner">
+    
+      <span class="card-category">Learning</span>
+    
+    <h3 class="card-title">
+      <a href="/learning/2024/01/08/intro-topological-spaces/">Introduction to Topological Spaces</a>
+    </h3>
+    
+      <p class="card-subtitle">What remains when you throw away distance but keep the notion of nearness</p>
+    
+    <p class="card-excerpt">In metric spaces, we measure distances. But many important properties — continuity, convergence, connectedness — only need to know which sets are “open,” not how far apart points are. Topology...</p>
+    <div class="card-meta">
+      <time>Jan 8, 2024</time>
+      
+        <span>· 13 min read</span>
+      
+    </div>
+  </div>
+</article>
+
+      
+        <article class="post-card">
+  <div class="post-card-inner">
+    
+      <span class="card-category">Learning</span>
+    
+    <h3 class="card-title">
+      <a href="/learning/2023/12/18/graph-theory-intro/">Graph Theory: The Mathematics of Networks</a>
+    </h3>
+    
+      <p class="card-subtitle">From bridges in Königsberg to social networks and circuit boards</p>
+    
+    <p class="card-excerpt">What Is a Graph?
+</p>
+    <div class="card-meta">
+      <time>Dec 18, 2023</time>
+      
+        <span>· 10 min read</span>
+      
+    </div>
+  </div>
+</article>
+
+      
+        <article class="post-card">
+  <div class="post-card-inner">
+    
+      <span class="card-category">Learning</span>
+    
+    <h3 class="card-title">
+      <a href="/learning/2023/12/05/four-fundamental-subspaces/">The Four Fundamental Subspaces</a>
+    </h3>
+    
+      <p class="card-subtitle">Gilbert Strang's organizing principle for all of linear algebra</p>
+    
+    <p class="card-excerpt">Gilbert Strang argues that all of linear algebra — Gaussian elimination, least squares, the SVD — flows from understanding four subspaces associated with any matrix $A \in \R^{m \times n}$....</p>
+    <div class="card-meta">
+      <time>Dec 5, 2023</time>
+      
+        <span>· 9 min read</span>
+      
+    </div>
+  </div>
+</article>
+
+      
+        <article class="post-card">
+  <div class="post-card-inner">
+    
+      <span class="card-category">Learning</span>
+    
+    <h3 class="card-title">
+      <a href="/learning/2023/11/20/groups-algebra-symmetry/">Groups: The Algebra of Symmetry</a>
+    </h3>
+    
+      <p class="card-subtitle">Why the symmetries of a triangle and modular addition are the same thing</p>
+    
+    <p class="card-excerpt">The Definition
+</p>
+    <div class="card-meta">
+      <time>Nov 20, 2023</time>
+      
+        <span>· 11 min read</span>
+      
+    </div>
+  </div>
+</article>
+
+      
+        <article class="post-card">
+  <div class="post-card-inner">
+    
+      <span class="card-category">Learning</span>
+    
+    <h3 class="card-title">
+      <a href="/learning/2023/10/30/real-numbers-completeness/">The Real Numbers: Completeness and Why It Matters</a>
+    </h3>
+    
+      <p class="card-subtitle">Plugging the holes that the rationals leave behind</p>
+    
+    <p class="card-excerpt">The rational numbers $\Q$ have a problem: they have holes. The sequence $1, 1.4, 1.41, 1.414, \ldots$ of rational approximations to $\sqrt{2}$ converges to something — but that something ($\sqrt{2}$)...</p>
+    <div class="card-meta">
+      <time>Oct 30, 2023</time>
+      
+        <span>· 12 min read</span>
+      
+    </div>
+  </div>
+</article>
+
+      
+    </div>
+  </section>
+
+  <!-- Recent Books -->
+  <section style="margin-bottom:4rem;">
+    <div class="section-heading">
+      <h2>Latest Book Reviews</h2>
+      <a href="/books/" class="see-all">See all →</a>
+    </div>
+    <div class="posts-grid">
+      
+      
+        <article class="post-card">
+  <div class="post-card-inner">
+    
+      <span class="card-category">Books</span>
+    
+    <h3 class="card-title">
+      <a href="/books/2024/03/20/review-godel-escher-bach/">Review: Gödel, Escher, Bach — An Eternal Golden Braid</a>
+    </h3>
+    
+      <p class="card-subtitle">Douglas Hofstadter's labyrinthine meditation on self-reference, consciousness, and formal systems</p>
+    
+    <p class="card-excerpt">
+  
+    Author
+    Douglas R. Hofstadter
+  
+  
+    Published
+    1979, Basic Books
+  
+  
+    Pages
+    777
+  
+  
+    Rating
+    ★★★★★
+  
+  
+    Best for
+    Anyone with mathematical curiosity and patience
+  
+
+</p>
+    <div class="card-meta">
+      <time>Mar 20, 2024</time>
+      
+        <span>· 15 min read</span>
+      
+    </div>
+  </div>
+</article>
+
+      
+        <article class="post-card">
+  <div class="post-card-inner">
+    
+      <span class="card-category">Books</span>
+    
+    <h3 class="card-title">
+      <a href="/books/2024/02/10/review-baby-rudin/">Review: Principles of Mathematical Analysis</a>
+    </h3>
+    
+      <p class="card-subtitle">Baby Rudin — the most influential, most hated, most loved analysis textbook ever written</p>
+    
+    <p class="card-excerpt">
+  
+    Author
+    Walter Rudin
+  
+  
+    Published
+    1953 (3rd ed. 1976), McGraw-Hill
+  
+  
+    Pages
+    342
+  
+  
+    Rating
+    ★★★★☆
+  
+  
+    Best for
+    Undergraduate analysts, graduate review
+  
+
+</p>
+    <div class="card-meta">
+      <time>Feb 10, 2024</time>
+      
+        <span>· 10 min read</span>
+      
+    </div>
+  </div>
+</article>
+
+      
+        <article class="post-card">
+  <div class="post-card-inner">
+    
+      <span class="card-category">Books</span>
+    
+    <h3 class="card-title">
+      <a href="/books/2024/01/30/review-man-who-knew-infinity/">Review: The Man Who Knew Infinity</a>
+    </h3>
+    
+      <p class="card-subtitle">Robert Kanigel's biography of Srinivasa Ramanujan — self-taught genius, mystic, and mathematical phenomenon</p>
+    
+    <p class="card-excerpt">
+  
+    Author
+    Robert Kanigel
+  
+  
+    Published
+    1991, Charles Scribner's Sons
+  
+  
+    Pages
+    438
+  
+  
+    Rating
+    ★★★★★
+  
+  
+    Best for
+    Everyone — no technical background needed
+  
+
+</p>
+    <div class="card-meta">
+      <time>Jan 30, 2024</time>
+      
+        <span>· 8 min read</span>
+      
+    </div>
+  </div>
+</article>
+
+      
+        <article class="post-card">
+  <div class="post-card-inner">
+    
+      <span class="card-category">Books</span>
+    
+    <h3 class="card-title">
+      <a href="/books/2023/11/05/review-how-to-solve-it/">Review: How to Solve It</a>
+    </h3>
+    
+      <p class="card-subtitle">Pólya's timeless guide to the art of mathematical problem solving</p>
+    
+    <p class="card-excerpt">
+  
+    Author
+    George Pólya
+  
+  
+    Published
+    1945, Princeton University Press
+  
+  
+    Pages
+    288
+  
+  
+    Rating
+    ★★★★★
+  
+  
+    Best for
+    Students, teachers, anyone who solves problems
+  
+
+</p>
+    <div class="card-meta">
+      <time>Nov 5, 2023</time>
+      
+        <span>· 7 min read</span>
+      
+    </div>
+  </div>
+</article>
+
+      
+    </div>
+  </section>
+
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-symbol">Σ</span>
+      <span>Math Server</span>
+    </div>
+    <nav class="footer-nav">
+      <a href="/exploration/">Exploration</a>
+      <a href="/learning/">Learning</a>
+      <a href="/books/">Books</a>
+      <a href="/misc/">Misc</a>
+    </nav>
+    <p class="footer-note">Built with Jekyll &amp; MathJax. Mathematics lives here.</p>
+  </div>
+</footer>
+
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

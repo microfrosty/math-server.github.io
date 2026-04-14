@@ -1,0 +1,13 @@
+---
+layout: page
+title: Misc
+description: Mathematical humor, history, interviews, and everything else that doesn't fit neatly elsewhere.
+permalink: /misc/
+---
+
+<div class="posts-grid wide">
+  {% assign posts = site.posts | where_exp: "p", "p.categories contains 'misc'" %}
+  {% for post in posts %}
+    {% include post-card.html post=post %}
+  {% endfor %}
+</div>

@@ -1,0 +1,28 @@
+---
+layout: page
+title: Learning
+description: Structured introductions, worked examples, and deep dives into every major area of mathematics.
+permalink: /learning/
+---
+
+<div class="math-categories">
+  {% for cat in site.math_categories %}
+  <a href="{{ '/learning/' | append: cat.slug | append: '/' | relative_url }}" class="math-cat-card">
+    <span class="math-cat-icon">{{ cat.icon }}</span>
+    <span class="math-cat-name">{{ cat.name }}</span>
+    {% assign cat_posts = site.posts | where: "math_category", cat.slug %}
+    <span class="math-cat-count">{{ cat_posts.size }} post{% if cat_posts.size != 1 %}s{% endif %}</span>
+  </a>
+  {% endfor %}
+</div>
+
+<div class="section-heading">
+  <h2>All Posts</h2>
+</div>
+
+<div class="posts-grid wide">
+  {% assign posts = site.posts | where_exp: "p", "p.categories contains 'learning'" %}
+  {% for post in posts %}
+    {% include post-card.html post=post %}
+  {% endfor %}
+</div>

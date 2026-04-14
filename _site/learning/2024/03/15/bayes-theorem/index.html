@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bayes' Theorem and Bayesian Reasoning — Math Server</title>
+  <meta name="description" content="A community space for mathematical exploration, learning, and discovery." />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- MathJax 3 — full LaTeX support -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        packages: {'[+]': ['ams', 'boldsymbol']},
+        tags: 'ams',
+        macros: {
+          R: '\\mathbb{R}',
+          N: '\\mathbb{N}',
+          Z: '\\mathbb{Z}',
+          Q: '\\mathbb{Q}',
+          C: '\\mathbb{C}',
+          eps: '\\varepsilon',
+          d: '\\mathrm{d}'
+        }
+      },
+      options: {
+        skipHtmlTags: ['script','noscript','style','textarea','pre','code']
+      },
+      startup: {
+        ready() {
+          MathJax.startup.defaultReady();
+        }
+      }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Bayes’ Theorem and Bayesian Reasoning | Math Server</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Bayes’ Theorem and Bayesian Reasoning" />
+<meta name="author" content="Math Server" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Theorem" />
+<meta property="og:description" content="The Theorem" />
+<link rel="canonical" href="http://localhost:4000/learning/2024/03/15/bayes-theorem/" />
+<meta property="og:url" content="http://localhost:4000/learning/2024/03/15/bayes-theorem/" />
+<meta property="og:site_name" content="Math Server" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-03-15T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bayes’ Theorem and Bayesian Reasoning" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Math Server"},"dateModified":"2024-03-15T00:00:00-05:00","datePublished":"2024-03-15T00:00:00-05:00","description":"The Theorem","headline":"Bayes’ Theorem and Bayesian Reasoning","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/learning/2024/03/15/bayes-theorem/"},"url":"http://localhost:4000/learning/2024/03/15/bayes-theorem/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+
+  <header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <span class="logo-symbol">Σ</span>
+      <span class="logo-text">Math Server</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/exploration/" class="nav-link ">Exploration</a>
+      <a href="/learning/" class="nav-link active">Learning</a>
+      <a href="/books/" class="nav-link ">Books</a>
+      <a href="/misc/" class="nav-link ">Misc</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="site-main">
+    <article class="post">
+  <header class="post-header">
+    <div class="post-meta-top">
+      
+        <a href="/learning/" class="post-category-tag">Learning</a>
+      
+    </div>
+    <h1 class="post-title">Bayes' Theorem and Bayesian Reasoning</h1>
+    
+      <p class="post-subtitle">How to update beliefs rationally in the face of new evidence</p>
+    
+    <div class="post-meta">
+      <time datetime="2024-03-15T00:00:00-05:00">March 15, 2024</time>
+      
+      <span class="reading-time">10 min read</span>
+    </div>
+  </header>
+
+  
+  <aside class="post-tldr">
+    <strong>TL;DR</strong> Bayes' theorem tells you how to update a prior probability given new evidence. It's the mathematical foundation of rational belief revision.
+  </aside>
+  
+
+  <div class="post-content">
+    <h2 id="the-theorem">The Theorem</h2>
+
+\[P(A \mid B) = \frac{P(B \mid A)\,P(A)}{P(B)}\]
+
+<p>In words: the probability of $A$ given $B$ equals the likelihood of $B$ under $A$, times the prior probability of $A$, divided by the total probability of $B$.</p>
+
+<p>The terms have names in Bayesian inference:</p>
+<ul>
+  <li>$P(A)$: <strong>prior</strong> — belief before seeing evidence</li>
+  <li>$P(B \mid A)$: <strong>likelihood</strong> — how probable is the evidence if $A$ is true?</li>
+  <li>$P(A \mid B)$: <strong>posterior</strong> — updated belief after evidence</li>
+  <li>$P(B)$: <strong>marginal likelihood</strong> (normalizing constant)</li>
+</ul>
+
+<h2 id="the-medical-test-example">The Medical Test Example</h2>
+
+<p>A disease affects 1% of the population. A test is 99% sensitive (true positive rate) and 99% specific (true negative rate). You test positive. What’s the probability you have the disease?</p>
+
+<p>Let $D$ = “has disease”, $T$ = “tests positive.”</p>
+
+\[P(D \mid T) = \frac{P(T \mid D)\,P(D)}{P(T)}\]
+
+\[P(T) = P(T \mid D)P(D) + P(T \mid D^c)P(D^c) = 0.99 \cdot 0.01 + 0.01 \cdot 0.99 = 0.0198\]
+
+\[P(D \mid T) = \frac{0.99 \cdot 0.01}{0.0198} = \frac{0.0099}{0.0198} = 0.5\]
+
+<p>Only <strong>50%</strong>, despite a 99% accurate test! The low prior (1%) dilutes the evidence.</p>
+
+<h2 id="sequential-updating">Sequential Updating</h2>
+
+<p>Bayes’ power shows when you update repeatedly. After each new piece of evidence $e_i$, the posterior becomes the new prior:</p>
+
+\[P(\theta \mid e_1, \ldots, e_n) \propto P(\theta)\prod_{i=1}^{n} P(e_i \mid \theta)\]
+
+<p>(assuming evidence is conditionally independent given $\theta$).</p>
+
+<h2 id="the-law-of-total-probability">The Law of Total Probability</h2>
+
+<p>The denominator in Bayes’ theorem uses:</p>
+
+\[P(B) = \sum_{i} P(B \mid A_i)\,P(A_i)\]
+
+<p>where ${A_i}$ partition the sample space. This is the <strong>law of total probability</strong>.</p>
+
+<h2 id="conjugate-priors">Conjugate Priors</h2>
+
+<p>Some prior-likelihood pairs produce posteriors of the same family — <strong>conjugate pairs</strong>. The most famous:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Prior</th>
+      <th>Likelihood</th>
+      <th>Posterior</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Beta$(α, β)$</td>
+      <td>Binomial</td>
+      <td>Beta$(α+k, β+n-k)$</td>
+    </tr>
+    <tr>
+      <td>Normal$(\mu_0, \sigma_0^2)$</td>
+      <td>Normal (known $\sigma$)</td>
+      <td>Normal</td>
+    </tr>
+    <tr>
+      <td>Gamma$(α, β)$</td>
+      <td>Poisson</td>
+      <td>Gamma</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Conjugate priors make Bayesian updating analytically tractable — no numerical integration needed.</p>
+
+<h2 id="bayesian-vs-frequentist">Bayesian vs. Frequentist</h2>
+
+<p>The philosophical divide:</p>
+<ul>
+  <li><strong>Frequentist:</strong> Probability is the long-run frequency of events. Parameters are fixed unknowns; data is random.</li>
+  <li><strong>Bayesian:</strong> Probability quantifies degree of belief. Parameters have distributions; data updates beliefs.</li>
+</ul>
+
+<p>Both frameworks are useful. The Bayesian approach shines when prior knowledge is meaningful and sample sizes are small.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+        <span class="tag">probability</span>
+      
+        <span class="tag">bayes</span>
+      
+        <span class="tag">statistics</span>
+      
+        <span class="tag">inference</span>
+      
+    </div>
+    
+    <a href="javascript:history.back()" class="back-link">← Back</a>
+  </footer>
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-symbol">Σ</span>
+      <span>Math Server</span>
+    </div>
+    <nav class="footer-nav">
+      <a href="/exploration/">Exploration</a>
+      <a href="/learning/">Learning</a>
+      <a href="/books/">Books</a>
+      <a href="/misc/">Misc</a>
+    </nav>
+    <p class="footer-note">Built with Jekyll &amp; MathJax. Mathematics lives here.</p>
+  </div>
+</footer>
+
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Epsilon-Delta Definition of a Limit — Math Server</title>
+  <meta name="description" content="A community space for mathematical exploration, learning, and discovery." />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- MathJax 3 — full LaTeX support -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        packages: {'[+]': ['ams', 'boldsymbol']},
+        tags: 'ams',
+        macros: {
+          R: '\\mathbb{R}',
+          N: '\\mathbb{N}',
+          Z: '\\mathbb{Z}',
+          Q: '\\mathbb{Q}',
+          C: '\\mathbb{C}',
+          eps: '\\varepsilon',
+          d: '\\mathrm{d}'
+        }
+      },
+      options: {
+        skipHtmlTags: ['script','noscript','style','textarea','pre','code']
+      },
+      startup: {
+        ready() {
+          MathJax.startup.defaultReady();
+        }
+      }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The Epsilon-Delta Definition of a Limit | Math Server</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="The Epsilon-Delta Definition of a Limit" />
+<meta name="author" content="Math Server" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Calculus rests on the concept of a limit. Informally, we say $\lim_{x \to a} f(x) = L$ when $f(x)$ gets arbitrarily close to $L$ as $x$ approaches $a$. But “arbitrarily close” and “approaches” are not mathematics — they’re metaphors. The epsilon-delta definition replaces the metaphors with logic." />
+<meta property="og:description" content="Calculus rests on the concept of a limit. Informally, we say $\lim_{x \to a} f(x) = L$ when $f(x)$ gets arbitrarily close to $L$ as $x$ approaches $a$. But “arbitrarily close” and “approaches” are not mathematics — they’re metaphors. The epsilon-delta definition replaces the metaphors with logic." />
+<link rel="canonical" href="http://localhost:4000/learning/2024/03/01/epsilon-delta-limits/" />
+<meta property="og:url" content="http://localhost:4000/learning/2024/03/01/epsilon-delta-limits/" />
+<meta property="og:site_name" content="Math Server" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-03-01T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Epsilon-Delta Definition of a Limit" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Math Server"},"dateModified":"2024-03-01T00:00:00-06:00","datePublished":"2024-03-01T00:00:00-06:00","description":"Calculus rests on the concept of a limit. Informally, we say $\\lim_{x \\to a} f(x) = L$ when $f(x)$ gets arbitrarily close to $L$ as $x$ approaches $a$. But “arbitrarily close” and “approaches” are not mathematics — they’re metaphors. The epsilon-delta definition replaces the metaphors with logic.","headline":"The Epsilon-Delta Definition of a Limit","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/learning/2024/03/01/epsilon-delta-limits/"},"url":"http://localhost:4000/learning/2024/03/01/epsilon-delta-limits/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+
+  <header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <span class="logo-symbol">Σ</span>
+      <span class="logo-text">Math Server</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/exploration/" class="nav-link ">Exploration</a>
+      <a href="/learning/" class="nav-link active">Learning</a>
+      <a href="/books/" class="nav-link ">Books</a>
+      <a href="/misc/" class="nav-link ">Misc</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="site-main">
+    <article class="post">
+  <header class="post-header">
+    <div class="post-meta-top">
+      
+        <a href="/learning/" class="post-category-tag">Learning</a>
+      
+    </div>
+    <h1 class="post-title">The Epsilon-Delta Definition of a Limit</h1>
+    
+      <p class="post-subtitle">Making the intuitive notion of 'approaching' mathematically precise</p>
+    
+    <div class="post-meta">
+      <time datetime="2024-03-01T00:00:00-06:00">March 1, 2024</time>
+      
+      <span class="reading-time">12 min read</span>
+    </div>
+  </header>
+
+  
+  <aside class="post-tldr">
+    <strong>TL;DR</strong> The ε-δ definition pins down exactly what it means for f(x) to approach L as x approaches a, removing all hand-waving from calculus.
+  </aside>
+  
+
+  <div class="post-content">
+    <p>Calculus rests on the concept of a <strong>limit</strong>. Informally, we say $\lim_{x \to a} f(x) = L$ when $f(x)$ gets arbitrarily close to $L$ as $x$ approaches $a$. But “arbitrarily close” and “approaches” are not mathematics — they’re metaphors. The epsilon-delta definition replaces the metaphors with logic.</p>
+
+<h2 id="the-definition">The Definition</h2>
+
+\[\lim_{x \to a} f(x) = L \iff \forall\, \eps &gt; 0,\; \exists\, \delta &gt; 0 \text{ s.t. } 0 &lt; |x - a| &lt; \delta \implies |f(x) - L| &lt; \eps\]
+
+<p>Read aloud: “For every challenge $\eps$ (how close you want $f(x)$ to be to $L$), I can find a response $\delta$ (how close $x$ must be to $a$) that meets the challenge.”</p>
+
+<h2 id="a-worked-example">A Worked Example</h2>
+
+<p><strong>Claim:</strong> $\lim_{x \to 3} (2x + 1) = 7$.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Proof:</strong> Let $\eps &gt; 0$ be given. We need $</td>
+      <td>f(x) - 7</td>
+      <td>&lt; \eps$, i.e., $</td>
+      <td>(2x+1) - 7</td>
+      <td>=</td>
+      <td>2x - 6</td>
+      <td>= 2</td>
+      <td>x-3</td>
+      <td>&lt; \eps$.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>This holds when $</td>
+      <td>x - 3</td>
+      <td>&lt; \eps/2$. So choose $\delta = \eps/2$.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Then $0 &lt;</td>
+      <td>x - 3</td>
+      <td>&lt; \delta \implies</td>
+      <td>f(x) - 7</td>
+      <td>= 2</td>
+      <td>x-3</td>
+      <td>&lt; 2\delta = \eps$. $\square$</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="why-the-0--x---a-condition">Why the $0 &lt; |x - a|$ Condition?</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Notice we require $0 &lt;</td>
+      <td>x - a</td>
+      <td>$, meaning $x \neq a$. Limits describe behavior <strong>near</strong> a point, not <strong>at</strong> it. The function need not even be defined at $a$.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For example, $\lim_{x \to 0} \frac{\sin x}{x} = 1$ even though $\frac{\sin 0}{0}$ is undefined.</p>
+
+<h2 id="the-squeeze-theorem">The Squeeze Theorem</h2>
+
+<p>If $g(x) \leq f(x) \leq h(x)$ near $a$, and $\lim_{x\to a} g(x) = \lim_{x\to a} h(x) = L$, then:</p>
+
+\[\lim_{x \to a} f(x) = L\]
+
+<p><strong>Proof of $\lim_{x \to 0} \frac{\sin x}{x} = 1$:</strong> For $0 &lt; x &lt; \pi/2$:</p>
+
+\[\cos x \leq \frac{\sin x}{x} \leq 1\]
+
+<p>Since $\lim_{x\to 0}\cos x = 1$ and $\lim_{x\to 0} 1 = 1$, the Squeeze Theorem gives the result.</p>
+
+<h2 id="continuity">Continuity</h2>
+
+<p>A function $f$ is <strong>continuous at $a$</strong> if:</p>
+
+\[\lim_{x \to a} f(x) = f(a)\]
+
+<p>Three things must hold: $f(a)$ is defined, the limit exists, and they’re equal. Continuity is what makes calculus “work” — the intermediate value theorem, the extreme value theorem, and differentiability all build on it.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+        <span class="tag">calculus</span>
+      
+        <span class="tag">limits</span>
+      
+        <span class="tag">real-analysis</span>
+      
+        <span class="tag">foundations</span>
+      
+    </div>
+    
+    <a href="javascript:history.back()" class="back-link">← Back</a>
+  </footer>
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-symbol">Σ</span>
+      <span>Math Server</span>
+    </div>
+    <nav class="footer-nav">
+      <a href="/exploration/">Exploration</a>
+      <a href="/learning/">Learning</a>
+      <a href="/books/">Books</a>
+      <a href="/misc/">Misc</a>
+    </nav>
+    <p class="footer-note">Built with Jekyll &amp; MathJax. Mathematics lives here.</p>
+  </div>
+</footer>
+
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header">
+    <div class="post-meta-top">
+      {% if page.category %}
+        <a href="{{ '/learning/' | append: page.category | append: '/' | relative_url }}" class="post-category-tag">{{ page.category | replace: '-', ' ' | capitalize }}</a>
+      {% elsif page.categories[0] %}
+        <a href="{{ '/' | append: page.categories[0] | append: '/' | relative_url }}" class="post-category-tag">{{ page.categories[0] | replace: '-', ' ' | capitalize }}</a>
+      {% endif %}
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.subtitle %}
+      <p class="post-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      {% if page.author %}<span class="post-author">by {{ page.author }}</span>{% endif %}
+      {% if page.reading_time %}<span class="reading-time">{{ page.reading_time }} min read</span>{% endif %}
+    </div>
+  </header>
+
+  {% if page.tldr %}
+  <aside class="post-tldr">
+    <strong>TL;DR</strong> {{ page.tldr }}
+  </aside>
+  {% endif %}
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    {% if page.tags %}
+    <div class="post-tags">
+      {% for tag in page.tags %}
+        <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <a href="javascript:history.back()" class="back-link">← Back</a>
+  </footer>
+</article>

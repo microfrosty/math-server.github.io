@@ -1,0 +1,13 @@
+---
+layout: page
+title: Books
+description: Reviews, reading notes, and recommendations for mathematics books — from undergraduate primers to research-level texts.
+permalink: /books/
+---
+
+<div class="posts-grid wide">
+  {% assign posts = site.posts | where_exp: "p", "p.categories contains 'books'" %}
+  {% for post in posts %}
+    {% include post-card.html post=post %}
+  {% endfor %}
+</div>

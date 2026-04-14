@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eigenvalues and Eigenvectors: The Skeleton of a Matrix — Math Server</title>
+  <meta name="description" content="A community space for mathematical exploration, learning, and discovery." />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- MathJax 3 — full LaTeX support -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        packages: {'[+]': ['ams', 'boldsymbol']},
+        tags: 'ams',
+        macros: {
+          R: '\\mathbb{R}',
+          N: '\\mathbb{N}',
+          Z: '\\mathbb{Z}',
+          Q: '\\mathbb{Q}',
+          C: '\\mathbb{C}',
+          eps: '\\varepsilon',
+          d: '\\mathrm{d}'
+        }
+      },
+      options: {
+        skipHtmlTags: ['script','noscript','style','textarea','pre','code']
+      },
+      startup: {
+        ready() {
+          MathJax.startup.defaultReady();
+        }
+      }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Eigenvalues and Eigenvectors: The Skeleton of a Matrix | Math Server</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Eigenvalues and Eigenvectors: The Skeleton of a Matrix" />
+<meta name="author" content="Math Server" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A matrix $A$ represents a linear transformation: it takes vectors in and spits vectors out. Most vectors get both rotated and scaled. But some special vectors — eigenvectors — only get scaled." />
+<meta property="og:description" content="A matrix $A$ represents a linear transformation: it takes vectors in and spits vectors out. Most vectors get both rotated and scaled. But some special vectors — eigenvectors — only get scaled." />
+<link rel="canonical" href="http://localhost:4000/learning/2024/02/20/eigenvalues-eigenvectors/" />
+<meta property="og:url" content="http://localhost:4000/learning/2024/02/20/eigenvalues-eigenvectors/" />
+<meta property="og:site_name" content="Math Server" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-02-20T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Eigenvalues and Eigenvectors: The Skeleton of a Matrix" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Math Server"},"dateModified":"2024-02-20T00:00:00-06:00","datePublished":"2024-02-20T00:00:00-06:00","description":"A matrix $A$ represents a linear transformation: it takes vectors in and spits vectors out. Most vectors get both rotated and scaled. But some special vectors — eigenvectors — only get scaled.","headline":"Eigenvalues and Eigenvectors: The Skeleton of a Matrix","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/learning/2024/02/20/eigenvalues-eigenvectors/"},"url":"http://localhost:4000/learning/2024/02/20/eigenvalues-eigenvectors/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+
+  <header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <span class="logo-symbol">Σ</span>
+      <span class="logo-text">Math Server</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/exploration/" class="nav-link ">Exploration</a>
+      <a href="/learning/" class="nav-link active">Learning</a>
+      <a href="/books/" class="nav-link ">Books</a>
+      <a href="/misc/" class="nav-link ">Misc</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="site-main">
+    <article class="post">
+  <header class="post-header">
+    <div class="post-meta-top">
+      
+        <a href="/learning/" class="post-category-tag">Learning</a>
+      
+    </div>
+    <h1 class="post-title">Eigenvalues and Eigenvectors: The Skeleton of a Matrix</h1>
+    
+      <p class="post-subtitle">Understanding what a linear transformation actually does</p>
+    
+    <div class="post-meta">
+      <time datetime="2024-02-20T00:00:00-06:00">February 20, 2024</time>
+      
+      <span class="reading-time">11 min read</span>
+    </div>
+  </header>
+
+  
+  <aside class="post-tldr">
+    <strong>TL;DR</strong> Eigenvectors are the directions a matrix doesn't rotate — only stretches. Their eigenvalues are the stretch factors. Together they reveal a matrix's true nature.
+  </aside>
+  
+
+  <div class="post-content">
+    <p>A matrix $A$ represents a linear transformation: it takes vectors in and spits vectors out. Most vectors get both rotated and scaled. But some special vectors — <strong>eigenvectors</strong> — only get scaled.</p>
+
+<h2 id="the-definition">The Definition</h2>
+
+<p>A nonzero vector $\mathbf{v}$ is an <strong>eigenvector</strong> of $A$ with <strong>eigenvalue</strong> $\lambda$ if:</p>
+
+\[A\mathbf{v} = \lambda\mathbf{v}\]
+
+<p>The matrix $A$ acts on $\mathbf{v}$ exactly like scalar multiplication by $\lambda$.</p>
+
+<h2 id="finding-eigenvalues">Finding Eigenvalues</h2>
+
+<p>Rewrite: $(A - \lambda I)\mathbf{v} = \mathbf{0}$. For nonzero solutions, the matrix $A - \lambda I$ must be singular:</p>
+
+\[\det(A - \lambda I) = 0\]
+
+<p>This is the <strong>characteristic equation</strong>. Its roots are the eigenvalues.</p>
+
+<p><strong>Example:</strong> Let $A = \begin{pmatrix} 3 &amp; 1 \ 0 &amp; 2 \end{pmatrix}$.</p>
+
+\[\det(A - \lambda I) = (3-\lambda)(2-\lambda) = 0 \implies \lambda_1 = 3,\; \lambda_2 = 2\]
+
+<p>For $\lambda_1 = 3$: $(A - 3I)\mathbf{v} = \begin{pmatrix}0&amp;1\0&amp;-1\end{pmatrix}\mathbf{v} = \mathbf{0}$, giving $\mathbf{v}_1 = \begin{pmatrix}1\0\end{pmatrix}$.</p>
+
+<p>For $\lambda_2 = 2$: $(A - 2I)\mathbf{v} = \begin{pmatrix}1&amp;1\0&amp;0\end{pmatrix}\mathbf{v} = \mathbf{0}$, giving $\mathbf{v}_2 = \begin{pmatrix}-1\1\end{pmatrix}$.</p>
+
+<h2 id="diagonalization">Diagonalization</h2>
+
+<p>If $A$ has $n$ linearly independent eigenvectors, form matrix $P = [\mathbf{v}_1 \mid \cdots \mid \mathbf{v}_n]$. Then:</p>
+
+\[A = P D P^{-1}, \quad D = \operatorname{diag}(\lambda_1, \ldots, \lambda_n)\]
+
+<p>This is <strong>diagonalization</strong>. It’s enormously useful: $A^k = P D^k P^{-1}$, and $D^k = \operatorname{diag}(\lambda_1^k, \ldots, \lambda_n^k)$.</p>
+
+<h2 id="the-spectral-theorem">The Spectral Theorem</h2>
+
+<p>For <strong>symmetric</strong> matrices ($A = A^T$):</p>
+<ul>
+  <li>All eigenvalues are <strong>real</strong></li>
+  <li>Eigenvectors for distinct eigenvalues are <strong>orthogonal</strong></li>
+  <li>$A$ is always diagonalizable: $A = Q D Q^T$ with $Q$ orthogonal</li>
+</ul>
+
+<p>This is the <strong>spectral theorem</strong>, the cornerstone of principal component analysis (PCA), quadratic forms, and quantum mechanics.</p>
+
+<h2 id="geometric-intuition">Geometric Intuition</h2>
+
+<p>The eigenvalues of the <strong>Jacobian</strong> of a dynamical system $\dot{\mathbf{x}} = f(\mathbf{x})$ at a fixed point tell you whether the system is stable:</p>
+<ul>
+  <li>$\Re(\lambda) &lt; 0$ for all $\lambda$: stable (attracting)</li>
+  <li>Any $\Re(\lambda) &gt; 0$: unstable (repelling)</li>
+</ul>
+
+<p>Eigenvalues aren’t just algebra — they’re the geometry of change.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+        <span class="tag">linear-algebra</span>
+      
+        <span class="tag">eigenvalues</span>
+      
+        <span class="tag">transformations</span>
+      
+    </div>
+    
+    <a href="javascript:history.back()" class="back-link">← Back</a>
+  </footer>
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-symbol">Σ</span>
+      <span>Math Server</span>
+    </div>
+    <nav class="footer-nav">
+      <a href="/exploration/">Exploration</a>
+      <a href="/learning/">Learning</a>
+      <a href="/books/">Books</a>
+      <a href="/misc/">Misc</a>
+    </nav>
+    <p class="footer-note">Built with Jekyll &amp; MathJax. Mathematics lives here.</p>
+  </div>
+</footer>
+
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
