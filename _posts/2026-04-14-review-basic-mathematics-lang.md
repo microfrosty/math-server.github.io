@@ -9,7 +9,7 @@ book_year: 1988
 book_publisher: "Springer"
 rating: 3
 author: "Frosty"
-tldr: A wildly uneven pre-calculus primer — the intuitive geometry section is excellent, but Lang spends too little time on what matters most and too much time on what the reader already knows.
+tldr: A wildly uneven pre-calculus primer - the intuitive geometry section is excellent, but Lang spends too little time on what matters most and too much time on what the reader already knows.
 image: /assets/images/basic-mathematics-lang.png
 ---
  
@@ -29,7 +29,7 @@ The next part is Coordinate Geometry, whose main purpose should be to introduce 
  
 ## Miscellaneous
  
-The final part, titled Miscellaneous, covers functions, mappings, complex numbers, induction and summations, and determinants. This part is a little all over the place, with some chapters — such as determinants — being far too brief to be useful, and other chapters — such as mappings, which has an amazing section on permutations — being very interesting with nice questions. It is also a big positive that Lang introduces induction.
+The final part, titled Miscellaneous, covers functions, mappings, complex numbers, induction and summations, and determinants. This part is a little all over the place, with some chapters - such as determinants - being far too brief to be useful, and other chapters - such as mappings, which has an amazing section on permutations - being very interesting with nice questions. It is also a big positive that Lang introduces induction.
  
 ## Verdict
  
