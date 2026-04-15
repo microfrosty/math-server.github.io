@@ -17,6 +17,9 @@
       {% if include.post.reading_time %}
         <span>· {{ include.post.reading_time }} min read</span>
       {% endif %}
+      {% if include.post.author %}
+        <span>· {{ include.post.author }}</span>
+      {% endif %}
     </div>
   </div>
 </article>
