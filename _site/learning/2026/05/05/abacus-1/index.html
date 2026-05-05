@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes and Solutions: Bloch - Real Numbers and Real Analysis - Micromass Athenæum</title>
+  <meta name="description" content="A community space for mathematical exploration, learning, and discovery." />
+  <link rel="stylesheet" href="/math-server.github.io/assets/css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- MathJax 3 - full LaTeX support -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        packages: {'[+]': ['ams', 'boldsymbol']},
+        tags: 'ams',
+        macros: {
+          R: '\\mathbb{R}',
+          N: '\\mathbb{N}',
+          Z: '\\mathbb{Z}',
+          Q: '\\mathbb{Q}',
+          C: '\\mathbb{C}',
+          eps: '\\varepsilon',
+          d: '\\mathrm{d}'
+        }
+      },
+      options: {
+        skipHtmlTags: ['script','noscript','style','textarea','pre','code']
+      },
+      startup: {
+        ready() {
+          MathJax.startup.defaultReady();
+        }
+      }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Notes and Solutions: Bloch - Real Numbers and Real Analysis | Micromass Athenæum</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Notes and Solutions: Bloch - Real Numbers and Real Analysis" />
+<meta name="author" content="Mnemosyne" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Preface" />
+<meta property="og:description" content="Preface" />
+<link rel="canonical" href="http://localhost:4000/math-server.github.io/learning/2026/05/05/abacus-1/" />
+<meta property="og:url" content="http://localhost:4000/math-server.github.io/learning/2026/05/05/abacus-1/" />
+<meta property="og:site_name" content="Micromass Athenæum" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-05T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Notes and Solutions: Bloch - Real Numbers and Real Analysis" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mnemosyne"},"dateModified":"2026-05-05T00:00:00-05:00","datePublished":"2026-05-05T00:00:00-05:00","description":"Preface","headline":"Notes and Solutions: Bloch - Real Numbers and Real Analysis","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/math-server.github.io/learning/2026/05/05/abacus-1/"},"url":"http://localhost:4000/math-server.github.io/learning/2026/05/05/abacus-1/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+
+  <header class="site-header">
+  <div class="header-inner">
+    <a href="/math-server.github.io/" class="site-logo">
+      <span class="logo-symbol">Σ</span>
+      <span class="logo-text">Micromass Athenæum</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/math-server.github.io/exploration/" class="nav-link ">Exploration</a>
+      <a href="/math-server.github.io/learning/" class="nav-link active">Learning</a>
+      <a href="/math-server.github.io/books/" class="nav-link ">Books</a>
+      <a href="/math-server.github.io/misc/" class="nav-link ">Misc</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="site-main">
+    <article class="post">
+  <header class="post-header">
+    <div class="post-meta-top">
+      
+        <a href="/math-server.github.io/learning/" class="post-category-tag">Learning</a>
+      
+    </div>
+    <h1 class="post-title">Notes and Solutions: Bloch - Real Numbers and Real Analysis</h1>
+    
+      <p class="post-subtitle">A structured set of reading notes, solutions, and exercises following Bloch's text</p>
+    
+    <div class="post-meta">
+      <time datetime="2026-05-05T00:00:00-05:00">May 5, 2026</time>
+      <span class="post-author">by Mnemosyne</span>
+      <span class="reading-time">10 min read</span>
+    </div>
+  </header>
+
+  
+  <aside class="post-tldr">
+    <strong>TL;DR</strong> Personal notes and solutions following Bloch's Real Numbers and Real Analysis.
+  </aside>
+  
+
+
+  <div class="post-content">
+    <h2 id="preface">Preface</h2>
+
+<p>The original intent was to make the resources for this project as accessible to everyone, no matter of age, location, and so on. I originally wanted to make this more friendly towards children, however I simply do not have enough experience with them to be able to guide them step by step. My current purpose for this project is aimed towards anyone who has already formed basic intuition in mathematics through whatever means, though they are not really needed.</p>
+
+<p>The bare minimum that I expect is just being able to complete about four pages of worksheets daily, with the fourth page mostly being fun exercises taking no more than 5 minutes. Most people will have never experienced something like this for mathematics, because a whole lot of the ideas are the intuition I have gained through working with Abacuses, Euclid’s Elements, Abstract Algebra, and Real Analysis.</p>
+
+<hr />
+
+<h2 id="organization">Organization</h2>
+
+<p>There are various types of pages, each serving a purpose:</p>
+
+<ol>
+  <li><strong>L</strong> - List/Letter pages. Not needed for students, but briefly discusses things I want to communicate, often unrelated to the materials in the following pages. Made solely for the purpose of writing an Introduction/Preface.</li>
+  <li><strong>R</strong> - Reading materials or lesson descriptions. Guides the student to be able to perform the problems presented in later sections.</li>
+  <li><strong>P</strong> - Basic problems that immediately follow the <strong>R</strong> page. May be used as a guide or bridge into the <strong>PS</strong> page. Presented with an answer key after the <strong>E</strong> page.</li>
+  <li><strong>PS</strong> - Building on the <strong>P</strong> pages, problems here increase in difficulty. There is no answer key for this section.</li>
+  <li><strong>E</strong> - Extra problems. Not as important as the earlier page types, but I encourage you to do them.</li>
+  <li><strong>A</strong> - Mental exercise, just for fun. If I were to force you, I would say the priority of this page is probably more than <strong>E</strong>.</li>
+</ol>
+
+<p>When working on the worksheet, I encourage you to time yourself from the first <strong>R</strong> page to the last <strong>E</strong> page. There will always be a time bar at the bottom of page <strong>E</strong> so that you can keep track of how long you spent on each worksheet.</p>
+
+<hr />
+
+<h2 id="counting-1">Counting 1</h2>
+
+<p>This chapter is dedicated to the basic knowledge of the abacus. We currently won’t be performing logical deductions, as they will come in two chapters.</p>
+
+<h3 id="terminology">Terminology</h3>
+
+<p>A 5-by-17 abacus has 5 beads and 17 columns. We call each vertical group of 5 beads <strong>a column</strong>, consisting of 1 upper bead and 4 lower beads. Each column represents a number between $0$ and $9$.</p>
+
+<p><img src="/math-server.github.io/assets/images/abacus-full.png" alt="A 5 by 17 Abacus" /></p>
+
+<p>The abacus is at <strong>clear</strong> when all beads are away from the bridge - this is the position representing $0$.</p>
+
+<p><img src="/math-server.github.io/assets/images/abacus0-9.png" alt="Abacus digits 0-9" /></p>
+
+<p>The lower beads count from $1$–$4$, and the upper bead contributes either $0$ or $5$. The next step is to understand how to represent numbers of $10$ or higher.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+        <span class="tag">real-analysis</span>
+      
+        <span class="tag">solutions</span>
+      
+        <span class="tag">notes</span>
+      
+        <span class="tag">abacus</span>
+      
+    </div>
+    
+    <a href="javascript:history.back()" class="back-link">← Back</a>
+  </footer>
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-symbol">Σ</span>
+      <span>Micromass Athenæum</span>
+    </div>
+    <nav class="footer-nav">
+      <a href="/math-server.github.io/exploration/">Exploration</a>
+      <a href="/math-server.github.io/learning/">Learning</a>
+      <a href="/math-server.github.io/books/">Books</a>
+      <a href="/math-server.github.io/misc/">Misc</a>
+    </nav>
+    <p class="footer-note">Built with Jekyll &amp; MathJax. Mathematics lives here.</p>
+  </div>
+</footer>
+
+
+  <script src="/math-server.github.io/assets/js/main.js"></script>
+</body>
+</html>
